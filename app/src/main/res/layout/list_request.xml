@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/doa_ampunan_allah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="16dp"
+        android:outlineAmbientShadowColor="#e9eff5"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:id="@+id/txt_jenis_produk_request"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Obat"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/maison"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="#262626"/>
+
+                    <TextView
+                        android:id="@+id/txt_jumlah_request"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20 Zak"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/maison"
+                        android:layout_alignParentRight="true"
+                        android:textColor="#5666d5"/>
+
+                </RelativeLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/txt_nama_produk_request"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Charoen Pokphand"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:textColor="#262626" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:id="@+id/txt_status_request"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sedang Diproses"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textSize="12sp"
+                        android:textColor="#fff"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_warning"
+                        android:padding="3dp"
+                        android:fontFamily="@font/maisonneuebook" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Selengkapnya"
+                            android:textSize="12sp"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="#5666d5"
+                            android:fontFamily="@font/maisonneuebook"/>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/view_btn"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

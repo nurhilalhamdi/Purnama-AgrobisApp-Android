@@ -1,0 +1,978 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    tools:context="org.d3ifcool.testing.PerformaKandang.PerformaKandangFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        app:elevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBarPerforma"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="#fff"
+                app:navigationIcon="?homeAsUpIndicator"
+                app:title="Performa Kandang" />
+
+            <RelativeLayout
+                android:id="@+id/btn_cetak_pdfPanen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/toolBarPerforma"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:clickable="true"
+                app:layout_constraintTop_toTopOf="@+id/toolBarPerforma"
+                android:layout_marginRight="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_pdf_file" />
+
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/sisaAyam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"/>
+
+
+                        <TextView
+                            android:id="@+id/txt_kode_kandang_performa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:gravity="center_vertical"
+                            android:textColor="#5666d5"
+                            android:text="Kandang 000123"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txt_alamat_kandang_performa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:gravity="center_vertical"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="30dp"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:text="Jalan Ahmad Yani No.9, KOTA PAREPARE - UJUNG, SULAWESI SELATAN"
+                            android:textSize="14sp" />
+
+
+
+                        <LinearLayout
+                            android:id="@+id/linearSpinnerPeriode_panen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonbold"
+                                android:gravity="center_vertical"
+                                android:text="Pilih Periode"
+                                android:textColor="#262626"
+                                android:textSize="16sp" />
+
+                            <Spinner
+                                android:id="@+id/spinner_periode_performa"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/custom_input"
+                                android:spinnerMode="dialog" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="8dp"
+                    android:outlineAmbientShadowColor="#e9eff5"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:weightSum="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="16sp"
+                                    android:textColor="#5666d5"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:layout_marginRight="2dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Periode"/>
+
+                                <TextView
+                                    android:id="@+id/txt_periode_performa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="18sp"
+                                    android:textColor="#5666d5"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="2dp"
+                                    android:text="1"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="20dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textSize="16sp"
+                                    android:textColor="#5666d5"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:text="Tanggal Mulai"/>
+
+                                <TextView
+                                    android:id="@+id/txt_tanggal_kandang_mulai_performa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textSize="14sp"
+                                    android:textColor="#5666d5"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:text="2020-02-02"/>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_marginRight="20dp"-->
+<!--                    android:layout_marginBottom="20dp"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:orientation="vertical">-->
+
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/idkandang_getharian"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:fontFamily="@font/maisonbold"-->
+<!--                            android:gravity="center_vertical"-->
+<!--                            android:textColor="#262626"-->
+<!--                            android:textSize="16sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/periode_getsampel"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:fontFamily="@font/maisonbold"-->
+<!--                            android:gravity="center_vertical"-->
+<!--                            android:textColor="#262626"-->
+<!--                            android:textSize="16sp" />-->
+
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:gravity="center"-->
+<!--                            android:orientation="horizontal">-->
+
+
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/kode_kandang"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:fontFamily="@font/maisonneuebook"-->
+<!--                                android:text="Petugas"-->
+<!--                                android:textColor="@android:color/darker_gray"-->
+<!--                                android:textSize="12sp" />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/kode_blok"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:fontFamily="@font/maisonneuebook"-->
+<!--                                android:text="Petugas"-->
+<!--                                android:textColor="@android:color/darker_gray"-->
+<!--                                android:textSize="12sp" />-->
+
+<!--                            <RelativeLayout-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content">-->
+
+<!--                                <TextView-->
+<!--                                    android:id="@+id/txt_id_user_home"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_alignParentRight="true"-->
+<!--                                    android:layout_margin="10dp"-->
+<!--                                    android:fontFamily="@font/maisonneuebook"-->
+<!--                                    android:gravity="center_horizontal"-->
+<!--                                    android:text="Id • 12"-->
+<!--                                    android:textAlignment="center"-->
+<!--                                    android:textColor="#262626" />-->
+
+<!--                            </RelativeLayout>-->
+
+
+<!--                        </LinearLayout>-->
+
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_populasi_periode_awal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:textSize="18sp"
+                            android:textColor="#262626"
+                            android:fontFamily="@font/maisonbold"
+                            android:text="Populasi Awal 10000"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:textSize="14sp"
+                            android:textColor="#262626"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:text="Ekor"/>
+                    </LinearLayout>
+
+
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/chart_pie"
+                        android:padding="20dp"
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:textColor="#262626"
+                            android:textSize="16sp"
+
+                            android:text="FCR"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:textColor="#262626"
+                            android:textSize="16sp"
+                            android:text="IP"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:textColor="#262626"
+                            android:textSize="16sp"
+
+                            android:text="Kematian"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_fcr_performa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:textColor="#5666d5"
+                            android:textSize="16sp"
+                            android:text="0.831 %"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_ip_performa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:textColor="#5666d5"
+                            android:textSize="16sp"
+                            android:text="1.241 %"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_kematian_performa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:textSize="16sp"
+                            android:textColor="#e40017"
+                            android:text="0.231 %"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            app:cardCornerRadius="8dp"
+                            android:outlineAmbientShadowColor="#e9eff5"
+                            app:cardElevation="7dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:textColor="#262626"
+                                    android:padding="10dp"
+                                    android:textSize="16sp"
+                                    android:text="Deplesi"/>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+
+                                    <TextView
+                                        android:id="@+id/txt_deplesi"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:paddingLeft="10dp"
+                                        android:paddingTop="10dp"
+                                        android:paddingBottom="10dp"
+                                        android:text="3"
+                                        android:textColor="#262626"
+                                        android:textSize="18sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="4dp"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:text="%"
+                                        android:textColor="#262626"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+
+                        </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="7dp"
+                            android:outlineAmbientShadowColor="#e9eff5">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:textColor="#262626"
+                                        android:padding="10dp"
+                                        android:textSize="16sp"
+                                        android:text="ABW"/>
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+
+                                        <TextView
+                                            android:id="@+id/txt_abw"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/maisonneuebook"
+                                            android:paddingLeft="10dp"
+                                            android:paddingTop="10dp"
+                                            android:paddingBottom="10dp"
+                                            android:text="2"
+                                            android:textColor="#262626"
+                                            android:textSize="18sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/maisonneuebook"
+                                            android:textColor="#262626"
+                                            android:textSize="14sp"
+                                            android:layout_marginLeft="4dp"
+                                            android:text="Kg / Ekor"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="7dp"
+                            android:outlineAmbientShadowColor="#e9eff5">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:textColor="#262626"
+                                        android:padding="10dp"
+                                        android:textSize="16sp"
+                                        android:text="Feed Intake"/>
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+
+
+                                        <TextView
+                                            android:id="@+id/txt_feed_intake"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/maisonneuebook"
+                                            android:textColor="#262626"
+                                            android:paddingTop="10dp"
+                                            android:paddingLeft="10dp"
+                                            android:paddingBottom="10dp"
+                                            android:textSize="18sp"
+                                            android:text="240"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/maisonneuebook"
+                                            android:textColor="#262626"
+                                            android:textSize="14sp"
+                                            android:layout_marginLeft="4dp"
+                                            android:text="Kg"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            app:cardCornerRadius="8dp"
+                            android:outlineAmbientShadowColor="#e9eff5"
+                            app:cardElevation="7dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:textColor="#262626"
+                                        android:padding="10dp"
+                                        android:textSize="16sp"
+                                        android:text="PBB"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+
+
+                                        <TextView
+                                            android:id="@+id/txt_pbb"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/maisonneuebook"
+                                            android:textColor="#262626"
+                                            android:paddingTop="10dp"
+                                            android:paddingLeft="10dp"
+                                            android:paddingBottom="10dp"
+                                            android:textSize="18sp"
+                                            android:text="2"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/maisonneuebook"
+                                            android:textColor="#262626"
+                                            android:textSize="14sp"
+                                            android:layout_marginLeft="4dp"
+                                            android:text="gram / Ekor"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    android:paddingTop="5dp"-->
+                <!--                    android:paddingBottom="5dp"-->
+                <!--                    android:gravity="center">-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/txt_title_bobot"-->
+                <!--                        android:layout_width="40dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:fontFamily="@font/maison"-->
+                <!--                        android:textSize="14sp"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:layout_marginLeft="10dp"-->
+                <!--                        android:textColor="#262626"-->
+                <!--                        android:text="Usia"/>-->
+
+
+
+                <!--                    <LinearLayout-->
+                <!--                        android:weightSum="4"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_weight="1">-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_weight="1"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:fontFamily="@font/maison"-->
+                <!--                            android:text="Tanggal"-->
+                <!--                            android:textColor="#262626"-->
+                <!--                            android:textSize="14sp" />-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_weight="1"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:fontFamily="@font/maison"-->
+                <!--                            android:text="Mati"-->
+                <!--                            android:textColor="#262626"-->
+                <!--                            android:textSize="14sp" />-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_weight="1"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:fontFamily="@font/maison"-->
+                <!--                            android:text="Sakit"-->
+                <!--                            android:textColor="#262626"-->
+                <!--                            android:textSize="14sp" />-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_weight="1"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:fontFamily="@font/maison"-->
+                <!--                            android:text="Pakan Pakai"-->
+                <!--                            android:textColor="#262626"-->
+                <!--                            android:textSize="14sp" />-->
+                <!--                    </LinearLayout>-->
+
+
+
+
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/remove"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginRight="10dp"-->
+                <!--                        android:fontFamily="@font/maison"-->
+                <!--                        android:textColor="#e40017"-->
+                <!--                        android:text="Aksi"-->
+                <!--                        android:textSize="14sp"-->
+                <!--                        android:padding="5dp"-->
+                <!--                        android:layout_gravity="center_vertical"/>-->
+
+
+                <!--                </LinearLayout>-->
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--    tools:context="org.d3ifcool.testing.Profil.ProfileChildMenu.DataHarianMenu">-->
+
+
+
+
+

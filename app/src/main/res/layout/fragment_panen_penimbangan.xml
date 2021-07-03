@@ -1,0 +1,502 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    tools:context="org.d3ifcool.testing.PanenPenimbangan.PanenPenimbanganFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        app:elevation="0dp">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBarPanenPenimbangan"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="?homeAsUpIndicator"
+            app:title="Panen &amp; Penimbangan" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/txtspinnerumurayam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/txt_id_kandangPanen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:gravity="center_vertical"
+                            android:text="0001"
+                            android:visibility="gone"
+                            android:textColor="#262626"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txt_id_userPanen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:gravity="center_vertical"
+                            android:text="0001"
+                            android:visibility="gone"
+                            android:textColor="#262626"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txt_id_chickinPanen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:gravity="center_vertical"
+                            android:text="0001"
+                            android:visibility="gone"
+                            android:textColor="#262626"
+                            android:textSize="16sp" />
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="horizontal">
+
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <TextView
+                                    android:id="@+id/txt_kode_kandang_panen"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/maisonbold"
+                                    android:gravity="center_vertical"
+                                    android:textColor="#262626"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bg_accept"
+                                    android:padding="5dp"
+                                    android:gravity="center_vertical"
+                                    android:layout_alignParentRight="true">
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:text="Periode"
+                                        android:textColor="@color/white"
+                                        android:layout_marginLeft="2dp"
+                                        android:layout_marginRight="2dp"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/txt_id_periodePanen"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:layout_marginLeft="2dp"
+                                        android:layout_marginRight="2dp"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:gravity="center_horizontal">
+
+
+
+                        <TextView
+                            android:id="@+id/txt_total_ayam_saat_sekarang_panen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maison"
+                            android:textSize="18sp"
+                            android:textColor="#5666d5" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:textSize="14sp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="#262626"
+                            android:text="Total Ayam Saat Ini"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:gravity="center_horizontal">
+
+
+                        <!--                                <TextView-->
+                        <!--                                    android:id="@+id/txt_doc_panen"-->
+                        <!--                                    android:layout_width="wrap_content"-->
+                        <!--                                    android:layout_height="wrap_content"-->
+                        <!--                                    android:layout_alignParentRight="true"-->
+                        <!--                                    android:layout_margin="10dp"-->
+                        <!--                                    android:fontFamily="@font/maisonneuebook"-->
+                        <!--                                    android:gravity="center_horizontal"-->
+                        <!--                                    android:text="DOC Wonokoyo"-->
+                        <!--                                    android:textAlignment="center"-->
+                        <!--                                    android:textColor="#262626" />-->
+                        <TextView
+                            android:id="@+id/txt_doc_panen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maison"
+                            android:textSize="18sp"
+                            android:paddingLeft="5dp"
+
+                            android:paddingRight="5dp"
+                            android:textColor="#5666d5" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:textSize="14sp"
+                            android:textColor="#262626"
+                            android:text="Jenis Strain DOC"/>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        app:boxBackgroundColor="@color/white"
+                        app:boxStrokeColor="#d3d3d3"
+                        app:boxStrokeWidth="0.5dp"
+                        app:suffixText="Hari"
+                        app:boxStrokeWidthFocused="0.5dp"
+                        app:endIconTint="#7f7f7f">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoCompleteUmurAyamPanen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:height="10dp"
+                            android:background="@drawable/edittext_bottom_line"
+                            android:inputType="none"
+                            android:paddingStart="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="16dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingBottom="16dp"
+                            android:text="Pilih Usia Panen"
+                            android:textColor="#7f7f7f"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:text="Tanggal Panen"
+                    android:textColor="#262626"
+                    android:textSize="12sp" />
+
+
+
+                <TextView
+                    android:id="@+id/txt_tanggal_ayam_panen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:height="40dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Tanggal Panen"
+                    android:clickable="true"
+                    android:textColorHint="#7f7f7f"
+                    android:textSize="14sp"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/ic_calendar"
+                    android:textColor="#7f7f7f"
+                    android:fontFamily="@font/maisonneuebook" />
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:text="BW(gram/Ekor)"
+                    android:textColor="#262626"
+                    android:textSize="12sp" />
+
+
+
+                <EditText
+                    android:id="@+id/edt_berat_perekor_panen"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:hint="BW(gram/Ekor)"
+                    android:inputType="numberDecimal|number"
+                    android:paddingLeft="10dp"
+                    android:textColor="#7f7f7f"
+                    android:textColorHint="#7f7f7f"
+                    android:textSize="14sp" />
+
+
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:text="Qty(Ekor) Panen"
+                    android:textColor="#262626"
+                    android:textSize="12sp" />
+
+
+
+                <EditText
+                    android:id="@+id/edt_qty_perekor_panen"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    android:inputType="number|numberDecimal"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:hint="Qty(Ekor)"
+                    android:paddingLeft="10dp"
+                    android:textColor="#7f7f7f"
+                    android:textColorHint="#7f7f7f"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:text="Qty(Ekor) Gagal Panen"
+                    android:textColor="#262626"
+                    android:textSize="12sp" />
+
+
+
+                <EditText
+                    android:id="@+id/edt_qty_perekor_gagal_panen"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    android:inputType="number|numberDecimal"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:hint="Qty(Ekor) Gagal Panen"
+                    android:paddingLeft="10dp"
+                    android:textColor="#7f7f7f"
+                    android:textColorHint="#7f7f7f"
+                    android:textSize="14sp" />
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:text="Tonase (Kg)"
+                    android:textColor="#262626"
+                    android:textSize="12sp" />
+
+
+
+                <EditText
+                    android:id="@+id/edt_tonase_ayam_panen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:height="40dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:hint="Tonase(Kg)"
+                    android:paddingLeft="10dp"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:textColor="#7f7f7f"
+                    android:textColorHint="#7f7f7f"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_simpan_panen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    app:cornerRadius="20dp"
+                    android:text="Simpan"/>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

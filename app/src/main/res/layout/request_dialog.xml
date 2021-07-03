@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_help"
+                android:id="@+id/imgDialog"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/maison"
+                android:gravity="center_horizontal"
+                android:text="Informasi Request"
+                android:textColor="#5666d5"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/imgDialog" />
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/maisonneuebook"
+                app:layout_constraintTop_toBottomOf="@id/textView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="kategori Pakan"
+                android:textSize="12sp" />
+
+
+
+            <LinearLayout
+                android:id="@+id/isidetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#f9fafc"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/title2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+
+
+                <LinearLayout
+                    android:id="@+id/lnbaris1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/title2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="3dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:text="Nomor Request :"
+                        android:textColor="#5666d5"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/txtnorequest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:text="REQ00005"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lnbaris2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/lnbaris1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="3dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:text="Tanggal Request :"
+                        android:textColor="#5666d5"
+                        android:textSize="12sp"             />
+
+                    <TextView
+                        android:id="@+id/txttglrequest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:text="2021-05-23 13:12"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lnbaris3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/lnbaris2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="3dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:text="Barang Request :"
+                        android:textColor="#5666d5"
+                        android:textSize="12sp"             />
+
+                    <TextView
+                        android:id="@+id/txtnamabarangrequest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:text="Pakan 1"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lnbaris4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/lnbaris3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="3dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:text="Jumlah Request :"
+                        android:textColor="#5666d5"
+                        android:textSize="12sp"             />
+
+                    <TextView
+                        android:id="@+id/txtjumlahbarangrequest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:text="20 Zak"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/lnbaris3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="3dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:text="Status :"
+                        android:textColor="#5666d5"
+                        android:textSize="12sp"             />
+                    <TextView
+                        android:id="@+id/txtstatusrequest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sedang Diproses"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textSize="12sp"
+                        android:textColor="#fff"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_warning"
+                        android:padding="3dp"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:layout_marginLeft="10dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="13dp"
+                android:fontFamily="@font/maisonneuebook"
+                android:text="Catatan Dari Petugas Admin"
+                android:textSize="12sp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/isidetail"
+                android:layout_marginLeft="13dp" />
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name_text_input"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/title3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="10dp"
+                    android:layout_margin="13dp"
+                    android:textColorHint="#7f7f7f"
+                    android:textSize="12sp"
+                    android:gravity="top"
+                    android:textColor="#7f7f7f"
+                    android:lines="8"
+                    android:maxLines="10"
+                    android:minLines="6"
+                    android:scrollbars="vertical"
+                    android:fontFamily="@font/maisonneuebook"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <Button
+                android:id="@+id/button_diterima"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diterima"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="10dp"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/name_text_input"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp" />
+
+
+            <Button
+                android:id="@+id/button_batal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Batalkan Request"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="10dp"
+                android:textSize="12sp"
+                android:backgroundTint="#ee2737"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_diterima"
+                app:layout_constraintTop_toBottomOf="@id/name_text_input"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp" />
+
+            <Button
+                android:id="@+id/button_cancel"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_batal"
+                app:layout_constraintTop_toBottomOf="@id/name_text_input" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+<!--<androidx.cardview.widget.CardView-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="fill_parent"-->
+<!--    app:cardElevation="10dp"-->
+<!--    app:cardCornerRadius="10dp"-->
+<!--    android:layout_margin="10dp"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_gravity="center">-->
+
+
+
+
+
+
+<!--</androidx.cardview.widget.CardView>-->

@@ -1,0 +1,710 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    tools:context="org.d3ifcool.testing.PengecekanSampel.CekSampleFrgament">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f5f5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBarCekSampel"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="?homeAsUpIndicator"
+                app:title="Cek Sampel"
+                app:titleTextColor="#262626" />
+
+            <RelativeLayout
+                android:id="@+id/btn_simpan_sampling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/toolBarCekSampel"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_accept"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:clickable="true"
+                app:layout_constraintTop_toTopOf="@+id/toolBarCekSampel"
+                android:layout_marginRight="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/maison"
+                    android:text="Simpan"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txt_id_chickin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_id_user_sampling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_nama_user_sampling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_get_date_sampling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="Menu Home"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_get_id_kandang_sampling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="Kandang"
+                android:visibility="gone"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_latitude_sampling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="latitude"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_longitude_sampling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="longitude"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_kode_kandang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="kode kandang"/>
+
+            <TextView
+                android:id="@+id/txt_kode_blok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="kode Blok"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:text="Umur Ayam &amp; Jenis Ayam Sampel"
+                    android:textColor="#262626"
+                    android:textSize="12sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="#d3d3d3"
+                    app:boxStrokeWidth="0.5dp"
+                    app:boxStrokeWidthFocused="0.5dp"
+                    app:endIconTint="#7f7f7f">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteUmurAyamSampel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:height="10dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:inputType="none"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp"
+                        android:text="Pilih Umur Ayam"
+                        android:textColor="#7f7f7f"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:endIconTint="#7f7f7f">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteJenisAyamSampel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:height="10dp"
+                        android:inputType="none"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp"
+                        android:text="Pilih Jenis Ayam"
+                        android:textColor="#7f7f7f"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:text="Total Ayam Saat Ini"
+                    android:textColor="#262626"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/edt_total_ayam_keselurahan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:height="40dp"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:background="#fff"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:hint="Total Ayam Saat Ini"
+                    android:paddingLeft="10dp"
+                    android:textColor="#7f7f7f"
+                    android:textColorHint="#7f7f7f"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:text="Kondisi Sampel Ayam"
+                    android:textColor="#262626"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:drawableStart="@drawable/ic_baseline_info_24"
+                    android:drawableLeft="@drawable/ic_baseline_info_24"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:text="Sebaiknya pilih ayam yang sehat sebagai sampel"
+                    android:textColor="#262626"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/edt_kondisi_ayam_sampel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:height="40dp"
+                    android:background="#fff"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:hint="Kondisi Ayam"
+                    android:paddingLeft="10dp"
+                    android:textColor="#7f7f7f"
+                    android:textColorHint="#7f7f7f"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:text="Jumlah &amp; Bobot Sampel Ayam"
+                    android:textColor="#262626"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/edt_jumlah_ayam_sampel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:height="40dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:hint="Jumlah Sampel Ayam"
+                    android:paddingLeft="10dp"
+                    android:textColor="#7f7f7f"
+                    android:textColorHint="#7f7f7f"
+                    android:textSize="14sp" />
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/textin"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:height="40dp"-->
+<!--                        android:background="@drawable/edittext_bottom_line" />-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/add"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:clickable="true"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:fontFamily="@font/maison"-->
+<!--                        android:textColor="#fff"-->
+<!--                        android:padding="5dp"-->
+<!--                        android:background="@drawable/bg_accept"-->
+<!--                        android:text="Tambah"/>-->
+<!--                </LinearLayout>-->
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:layout_width="match_parent">
+
+                    <EditText
+                        android:id="@+id/textin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Bobot Sampel"
+                        android:background="@android:color/transparent"
+                        android:height="40dp"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:textColor="#7f7f7f"
+                        android:paddingLeft="10dp"
+                        android:textSize="14sp"
+                        android:textColorHint="#7f7f7f"
+                         />
+
+
+
+                    <TextView
+                        android:id="@+id/add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/maison"
+                        android:textColor="#00aa13"
+                        android:text="Tambah"
+                        android:textSize="14sp"
+                        android:padding="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:background="#fff"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+<!--                    <EditText-->
+<!--                        android:id="@+id/edt_bobot_sampel_ayam"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:background="@drawable/edittext_bottom_line"-->
+<!--                        android:fontFamily="@font/maisonneuebook"-->
+<!--                        android:hint="Bobot Sampel"-->
+<!--                        android:paddingLeft="10dp"-->
+<!--                        android:textColor="#7f7f7f"-->
+<!--                        android:textColorHint="#7f7f7f"-->
+<!--                        android:textSize="14sp" />-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/btn_tambah_bobot"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Tambah"-->
+<!--                        android:padding="5dp"-->
+<!--                        android:background="@drawable/bg_accept"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:textColor="#fff"-->
+<!--                        />-->
+<!--                </LinearLayout>-->
+
+<!--                    <Button-->
+<!--                        android:id="@+id/btn_tambah_bobot"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Tambah Bobot"-->
+<!--                        android:textAllCaps="false"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:fontFamily="@font/maison"-->
+<!--                        android:layout_margin="10dp"/>-->
+
+
+
+                <LinearLayout
+                    android:id="@+id/layout_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:orientation="vertical"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:id="@+id/txt_title_bobot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/maison"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#262626"
+                        android:text="Total Bobot"/>
+
+                    <TextView
+                        android:id="@+id/txt_bobot_cek"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:textColor="#262626"
+                        android:layout_height="wrap_content"/>
+
+
+                    <RelativeLayout
+                        android:id="@+id/showall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/bg_accept"
+                        android:paddingLeft="7dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="7dp"
+                        android:paddingBottom="5dp"
+                        android:clickable="true"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maison"
+                            android:text="Hitung"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+<!--                    <Button-->
+<!--                        android:id="@+id/showall"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:text="Hitung"-->
+<!--                        android:textAllCaps="false"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:height="40dp"-->
+<!--                        android:fontFamily="@font/maison"-->
+<!--                        android:layout_margin="10dp"/>-->
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:text="Bobot Rata-Rata (Kg)"
+                        android:textColor="#262626"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_width="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maison"
+                            android:textSize="14sp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#262626"
+                            android:text="Bobot Rata-Rata"/>
+
+                        <TextView
+                            android:id="@+id/txt_bobot_rata_rata_cek"
+                            android:layout_width="match_parent"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="16dp"
+                            android:text="0.00 kg"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:textColor="#262626"
+                            android:layout_height="wrap_content"/>
+
+
+                        <RelativeLayout
+                            android:id="@+id/btn_hitung_bobot_cek"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/bg_accept"
+                            android:paddingLeft="7dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="7dp"
+                            android:paddingBottom="5dp"
+                            android:clickable="true"
+                            android:layout_marginRight="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maison"
+                                android:text="Hitung"
+                                android:textColor="@color/white" />
+
+                        </RelativeLayout>
+
+<!--                        <Button-->
+<!--                            android:id="@+id/btn_hitung_bobot_cek"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:text="Hitung"-->
+<!--                            android:textAllCaps="false"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:height="40dp"-->
+<!--                            android:fontFamily="@font/maison"-->
+<!--                            android:layout_margin="10dp"/>-->
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:text="Ambil Bukti"
+                        android:textColor="#262626"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:drawableStart="@drawable/ic_baseline_info_24"
+                        android:drawableLeft="@drawable/ic_baseline_info_24"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:text="Klik kamera untuk ambil bukti foto"
+                        android:textColor="#262626"
+                        android:textSize="11sp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:layout_width="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/hasil_foto_Sampel"
+                                android:layout_width="80dp"
+                                android:layout_height="100dp"
+                                android:layout_margin="10dp"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:visibility="gone"
+                                android:src="@drawable/ic_launcher_background"/>
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tambah_foto_sampel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/hasil_foto_bukti_sampel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_photo_camera_24"/>
+
+                            <TextView
+                                android:id="@+id/txt_foto_cek_sampel"
+                                android:layout_width="wrap_content"
+                                android:visibility="gone"
+                                android:layout_height="wrap_content"
+                                android:text=""/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/maison"
+                                android:textColor="#00aa13"
+                                android:text="Tambah Foto"/>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:background="#fff"-->
+<!--                    android:layout_height="match_parent">-->
+
+
+
+<!--                </LinearLayout>-->
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_centerInParent="true">
+            <ProgressBar
+                android:id="@+id/pgbar_ceksampel"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="invisible"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

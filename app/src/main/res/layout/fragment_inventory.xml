@@ -1,0 +1,411 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="org.d3ifcool.testing.Inventory.InventoryFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f5f5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBarInventory"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="?homeAsUpIndicator"
+                app:title="Inventory"
+                app:titleTextColor="#262626" />
+
+            <RelativeLayout
+                android:id="@+id/btn_simpan_request"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/toolBarInventory"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_accept"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:clickable="true"
+                app:layout_constraintTop_toTopOf="@+id/toolBarInventory"
+                android:layout_marginRight="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/maison"
+                    android:text="Simpan"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="10dp"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Request Inventory"
+                        android:textSize="14sp"
+                        android:textColor="#5666d5"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/maison" />
+
+                    <TextView
+                        android:id="@+id/tgl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Request Inventory"
+                        android:visibility="gone"
+                        android:textSize="14sp"
+                        android:textColor="#5666d5"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/maison" />
+
+                    <TextView
+                        android:id="@+id/txt_idbarang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Request Inventory"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        android:textColor="#5666d5"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/maison" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kategori"
+                            android:textSize="12sp"
+                            android:textColor="#5666d5"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/maisonneuebook" />
+
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:scrollbars="none">
+
+
+                       <com.google.android.material.chip.ChipGroup
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+
+                           app:singleSelection="true"
+                           >
+                           
+                           <com.google.android.material.chip.Chip
+                               android:id="@+id/kgPakan"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Pakan"
+                               android:textAppearance="@style/chipText"
+                               app:chipIconSize="16sp"
+                               style="@style/CustomChip"
+                               android:textSize="12sp"/>
+
+                           <com.google.android.material.chip.Chip
+                               android:id="@+id/kgObat"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Obat"
+                               app:chipIconSize="16sp"
+                               android:textAppearance="@style/chipText"
+                               style="@style/CustomChip"
+                               android:textSize="12sp"/>
+
+                           <com.google.android.material.chip.Chip
+                               android:id="@+id/kgVitamin"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Vitamin"
+                               app:chipIconSize="16sp"
+                               android:textAppearance="@style/chipText"
+                               style="@style/CustomChip"
+                               android:textSize="12sp"/>
+
+                           <com.google.android.material.chip.Chip
+                               android:id="@+id/kgVaksin"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Vaksin"
+                               android:textAppearance="@style/chipText"
+                               app:chipIconSize="16sp"
+                               style="@style/CustomChip"
+                               android:textSize="12sp"/>
+
+                           <com.google.android.material.chip.Chip
+                               android:id="@+id/kgAlat"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Peralatan Kandang"
+                               app:chipIconSize="16sp"
+                               style="@style/CustomChip"
+                               android:textAppearance="@style/chipText"
+                               android:textSize="12sp"/>
+
+                           <com.google.android.material.chip.Chip
+                               android:id="@+id/kgLainnya"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Lainnya"
+                               app:chipIconSize="16sp"
+                               style="@style/CustomChip"
+                               android:textAppearance="@style/chipText"
+                               android:textSize="12sp"/>
+                       </com.google.android.material.chip.ChipGroup>
+
+
+                        </HorizontalScrollView>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nama Produk"
+                            android:textSize="12sp"
+                            android:textColor="#5666d5"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/maisonneuebook" />
+
+                        <Spinner
+                            android:id="@+id/spinnerNamaProduk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dialog"
+                            android:background="@drawable/edittext_bottom_line"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinnerJenis"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dialog"
+                            android:background="@drawable/edittext_bottom_line"
+                            />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jumlah Barang Request"
+                            android:textSize="12sp"
+                            android:textColor="#5666d5"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/maisonneuebook" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/edittext_bottom_line">
+
+
+                        <EditText
+                            android:id="@+id/edt_jumlah_request"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:height="40dp"
+                            android:paddingLeft="10dp"
+                            android:hint="Jumlah Request"
+                            android:layout_weight="1"
+                            android:textColorHint="#7f7f7f"
+                            android:textSize="14sp"
+                            android:textColor="#7f7f7f"
+                            android:fontFamily="@font/maisonneuebook" />
+                            <TextView
+                                android:id="@+id/satuanInvetory"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Zak"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_marginLeft="10dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Catatan (Opsional)"
+                            android:textSize="12sp"
+                            android:textColor="#5666d5"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/maisonneuebook" />
+
+                        <EditText
+                            android:id="@+id/edt_catatan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_bottom_line"
+                            android:paddingLeft="10dp"
+                            android:inputType="textMultiLine"
+                            android:textColorHint="#7f7f7f"
+                            android:textSize="14sp"
+                            android:hint="Catatan"
+                            android:gravity="top"
+                            android:textColor="#7f7f7f"
+                            android:lines="8"
+                            android:maxLines="10"
+                            android:minLines="6"
+                            android:scrollbars="vertical"
+                            android:fontFamily="@font/maisonneuebook" />
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Tanggal Request"-->
+<!--                            android:textSize="12sp"-->
+<!--                            android:textColor="#5666d5"-->
+<!--                            android:layout_margin="10dp"-->
+<!--                            android:fontFamily="@font/maisonneuebook" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_tangggal_request"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@drawable/edittext_bottom_line"-->
+<!--                            android:height="40dp"-->
+<!--                            android:paddingLeft="10dp"-->
+<!--                            android:gravity="center_vertical"-->
+<!--                            android:hint="Tanggal Request"-->
+<!--                            android:clickable="true"-->
+<!--                            android:textColorHint="#7f7f7f"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:drawablePadding="5dp"-->
+<!--                            android:drawableLeft="@drawable/ic_calendar"-->
+<!--                            android:textColor="#7f7f7f"-->
+<!--                            android:fontFamily="@font/maisonneuebook" />-->
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#fff">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="List Request"
+                        android:textSize="14sp"
+
+                        android:textColor="#5666d5"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/maison"/>
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvReq"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none"
+                        tools:listitem="@layout/list_request"/>
+                    <TextView
+                        android:id="@+id/request_belum_ada"
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:text="Request Belum Ada"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

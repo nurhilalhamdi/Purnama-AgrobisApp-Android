@@ -1,0 +1,104 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="org.d3ifcool.testing.Profil.ProfileChildMenu.TentangKamiFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        app:elevation="0dp">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBarTentangKami"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="#fff"
+            app:navigationIcon="?homeAsUpIndicator"
+            app:title="Tentang Aplikasi" />
+
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_aboutapp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/maisonneuebook"
+                android:lineHeight="30dp"
+                android:justificationMode="inter_word"
+                android:text="Agrobiz adalah sarana digital untuk memudahkan proses manajemen dan recording data peternakan anda dengan menyediakan aplikasi ini"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_privacy"
+                android:layout_width="match_parent"
+                android:layout_margin="20dp"
+                app:cornerRadius="20dp"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:text="Privacy Policy"/>
+
+            <TextView
+                android:id="@+id/txt_privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy"
+                android:layout_margin="20dp"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:fontFamily="@font/maisonneuebook"
+                android:lineHeight="30dp"
+                android:justificationMode="inter_word"/>
+
+
+            
+
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--    tools:context="org.d3ifcool.testing.Profil.ProfileChildMenu.DataHarianMenu">-->
+
+
+
+
+  

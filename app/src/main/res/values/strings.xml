@@ -1,0 +1,216 @@
+<resources>
+    <string name="app_name">Agrobis-id</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //prefconfig
+    <string name="pref_file">org.d3ifcool.preference_file</string>
+    <string name="pref_login_status">org.d3ifcool.preference_login_status</string>
+    <string name="pref_user_name">org.d3ifcool.preference_user_name</string>
+    <string name="pref_user_id">org.d3ifcool.preference_user_id</string>
+    <string name="tab_text_1">Laporan Harian</string>
+    <string name="tab_text_2">Laporan Sampel</string>
+
+    <string-array name="jenis_kandang">
+        <item>Kandang Terbuka (Open House)</item>
+        <item>Kandang Tertutup (Close House)</item>
+    </string-array>
+
+    <string-array name="jenis_produk">
+        <item>-- Pilih Jenis Produk -- </item>
+        <item>DOC Broiler Polos</item>
+        <item>DOC Broiler Super</item>
+    </string-array>
+
+    <string-array name="kategori">
+        <item>Pilih Kategori</item>
+    </string-array>
+
+
+    <string-array name="pilih_pakan">
+        <item>Pilih Merk Pakan</item>
+    </string-array>
+
+    <string-array name="pilih_obat">
+        <item>Pilih Merk Obat</item>
+    </string-array>
+
+    <string-array name="pilih_vitamin">
+        <item>Pilih Merk Vitamin</item>
+    </string-array>
+
+    <string-array name="pilih_vaksin">
+        <item>Pilih Merk Vaksin</item>
+    </string-array>
+
+    <string-array name="obat_tidak_dipilih">
+        <item>Tidak Ada</item>
+    </string-array>
+
+    <string-array name="vitamin_tidak_dipilih">
+        <item>Tidak Ada</item>
+    </string-array>
+
+    <string-array name="vaksin_tidak_pilih">
+        <item>Tidak Ada</item>
+    </string-array>
+
+    <string-array name="type_produk">
+        <item>-- Pilih Type Produk --</item>
+        <item>DOC Charoen Pokphand</item>
+        <item>DOC Cibadak</item>
+        <item>DOC Wonokoyo</item>
+        <item>DOC Patriot</item>
+        <item>DOC Big Top</item>
+        <item>DOC Manggis</item>
+        <item>DOC Kerta Mulya Sejahtera</item>
+        <item>DOC Japfa</item>
+        <item>DOC AS</item>
+        <item>DOC Intichick</item>
+        <item>DOC Malindo</item>
+        <item>DOC Intertama Trikencana Bersinar</item>
+        <item>DOC Sierad</item>
+        <item>DOC Super Chick</item>
+        <item>DOC Januputra</item>
+        <item>DOC Silga</item>
+        <item>DOC Ayam Unggul</item>
+        <item>DOC Bibit Unggul Sentosa</item>
+        <item>DOC New Hope Indonesia</item>
+        <item>DOC Sinar Pelita Abadi</item>
+        <item>DOC Sinta</item>
+    </string-array>
+
+
+    <string-array name="jenis_ayam">
+        <item>Ayam Kecil</item>
+        <item>Ayam Sedang</item>
+        <item>Ayam Besar</item>
+    </string-array>
+
+    <string-array name="umur_ayam">
+        <item>-- Pilih Umur Ayam --</item>
+        <item>1 </item>
+        <item>2 </item>
+        <item>3 </item>
+        <item>4 </item>
+        <item>5 </item>
+        <item>6 </item>
+        <item>7 </item>
+        <item>8 </item>
+        <item>9 </item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+    </string-array>
+
+    <string name="privacy">Privacy Policy
+PT. Multi Data Sinergi built the Agrobiz App app as an Open Source app. This SERVICE is provided by PT. Multi Data Sinergi at no cost and is intended for use as is.
+
+This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.
+
+If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.
+
+The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at Agrobiz App unless otherwise defined in this Privacy Policy.
+
+Information Collection and Use
+
+For a better experience, while using our Service, we may require you to provide us with certain personally identifiable information. The information that we request will be retained by us and used as described in this privacy policy.
+
+The app does use third party services that may collect information used to identify you.
+
+Link to privacy policy of third party service providers used by the app
+
+Google Play Services
+Log Data
+
+We want to inform you that whenever you use our Service, in a case of an error in the app we collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.
+
+Cookies
+
+Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device\'s internal memory.
+
+This Service does not use these “cookies” explicitly. However, the app may use third party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.
+
+Service Providers
+
+We may employ third-party companies and individuals due to the following reasons:
+
+To facilitate our Service;
+To provide the Service on our behalf;
+To perform Service-related services; or
+To assist us in analyzing how our Service is used.
+We want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.
+
+Security
+
+We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.
+
+Links to Other Sites
+
+This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
+
+Children’s Privacy
+
+These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13 years of age. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions.
+
+Changes to This Privacy Policy
+
+We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.
+
+This policy is effective as of 2021-06-15
+
+Contact Us
+
+If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at ayamquwebid6@gmail.com.
+
+This privacy policy page was created at privacypolicytemplate.net and modified/generated by App Privacy Policy Generator</string>
+
+</resources>

@@ -1,0 +1,1286 @@
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context="org.d3ifcool.testing.PengecekanFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fitsSystemWindows="true"
+            android:elevation="0dp"
+            app:elevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolBarPengecekan"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="#5666d5"
+                    app:navigationIcon="?homeAsUpIndicator"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:title="Pengecekan" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardElevation="10dp"
+                    android:layout_height="200dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="273dp"
+                        android:scaleType="centerCrop"
+                        android:src="#5666d5"/>
+
+
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_get_id_user_kandang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/txt_get_nama_user_kandang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+
+
+                        <TextView
+                            android:id="@+id/id_chickin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+                        <TextView
+                            android:id="@+id/type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+                        <TextView
+                            android:id="@+id/kondisi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/harga"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/jenis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/totalpakan"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/totalobat"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/totalvitamin"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/totalvaksin"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="10dp"
+                            android:orientation="horizontal">
+
+                            <com.facebook.shimmer.ShimmerFrameLayout
+                                android:id="@+id/shimmerIDKandang"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:background="@drawable/bg_glaucous"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"/>
+
+
+                            </com.facebook.shimmer.ShimmerFrameLayout>
+                            <ImageView
+                                android:src="@mipmap/ic_launcher"
+                                android:visibility="gone"
+                                android:id="@+id/avatarimageIdKDG"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical">
+
+
+
+                                <com.facebook.shimmer.ShimmerFrameLayout
+                                    android:id="@+id/shimmerJenisKandang"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/bg_glaucous"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:textSize="12sp"
+                                        android:textColor="#fff"
+                                        android:drawablePadding="5dp"
+                                        android:gravity="center_vertical"/>
+
+
+                                </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                                <TextView
+                                    android:id="@+id/txt_get_id_kandang"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pengecekan Kandang ID 12"
+                                    android:fontFamily="@font/maison"
+                                    android:textSize="10sp"
+                                    android:visibility="gone"
+                                    android:lineSpacingMultiplier="1.3"
+                                    android:textColor="#262626"/>
+
+                                <TextView
+                                    android:id="@+id/txt_jenis_kandang"
+                                    android:layout_width="320dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jl. Jambu, No.12, KOTA PAREPARE - UJUNG, SULAWESI SELATAN"
+                                    android:fontFamily="@font/maison"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="14sp"
+                                    android:visibility="gone"
+                                    android:textColor="#fff"
+                                    android:drawablePadding="5dp"
+                                    android:gravity="center_vertical"/>
+
+
+
+
+
+                                <com.facebook.shimmer.ShimmerFrameLayout
+                                    android:id="@+id/shimmerAlamatKandang"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp">
+
+                                    <TextView
+                                        android:layout_width="250dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/bg_glaucous"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:textSize="12sp"
+                                        android:textColor="#262626"
+                                        android:drawablePadding="5dp"
+                                        android:gravity="center_vertical"/>
+
+                                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                                <TextView
+                                    android:id="@+id/txt_alamat_kandang"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:drawableStart="@drawable/ic_baseline_location_on_24"
+                                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="#fff"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:gravity="center_vertical"
+                                    android:maxLines="2"
+                                    android:text="Jl. Jambu, No.12, KOTA PAREPARE - UJUNG, SULAWESI SELATAN"
+                                    android:textColor="#fff"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+
+                                <!--                    <androidx.appcompat.widget.SwitchCompat-->
+                                <!--                        android:id="@+id/switch_compat"-->
+                                <!--                        android:layout_width="wrap_content"-->
+                                <!--                        android:layout_height="wrap_content"-->
+                                <!--                        android:textSize="14sp"-->
+                                <!--                        android:textColor="#fff"-->
+                                <!--                        android:fontFamily="@font/maisonbold"-->
+                                <!--                        android:text="Mulai Produksi"/>-->
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:weightSum="3"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/bg_icon_menu_pengecekan"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:elevation="5dp"
+                                android:layout_margin="5dp"
+                                android:padding="5dp"
+                                android:orientation="vertical"
+                                android:clickable="true"
+                                android:gravity="center_horizontal">
+
+                                <com.facebook.shimmer.ShimmerFrameLayout
+                                    android:id="@+id/shimmerKodeKandang"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="70dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/bg_glaucous"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:textSize="12sp"
+                                        android:textColor="#fff"
+                                        android:drawablePadding="5dp"/>
+
+
+
+                                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                                <TextView
+                                    android:id="@+id/kdkandang"
+                                    android:textSize="13sp"
+                                    android:visibility="gone"
+                                    android:fontFamily="@font/maison"
+                                    android:layout_width="wrap_content"
+                                    android:textColor="#262626"
+                                    android:layout_height="wrap_content"
+                                    android:text="00011122"/>
+
+                                <TextView
+                                    android:textSize="12sp"
+                                    android:textColor="#262626"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kode Kandang"/>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:elevation="5dp"
+
+                                android:layout_margin="5dp"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:gravity="center_horizontal">
+
+                                <com.facebook.shimmer.ShimmerFrameLayout
+                                    android:id="@+id/shimmerKodeBlok"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="70dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/bg_glaucous"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:textSize="12sp"
+                                        android:textColor="#fff"
+                                        android:drawablePadding="5dp"/>
+
+                                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                                <TextView
+                                    android:id="@+id/blkandang"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/maison"
+                                    android:textSize="13sp"
+                                    android:visibility="gone"
+                                    android:textColor="#262626"
+                                    android:text="00011122"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:textSize="12sp"
+                                    android:layout_marginTop="5dp"
+                                    android:textColor="#262626"
+                                    android:text="Kode Blok"/>
+
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:elevation="5dp"
+                                android:layout_margin="5dp"
+                                android:padding="5dp"
+                                android:clickable="true"
+                                android:gravity="center">
+
+                                <com.facebook.shimmer.ShimmerFrameLayout
+                                    android:id="@+id/shimmerStatusKandang"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="70dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/bg_glaucous"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:textSize="12sp"
+                                        android:textColor="#fff"
+                                        android:drawablePadding="5dp"/>
+
+                                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                                <TextView
+                                    android:id="@+id/txt_status_kandang"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/maison"
+                                    android:textSize="13sp"
+                                    android:background="@drawable/bg_accept"
+                                    android:paddingLeft="5dp"
+                                    android:visibility="gone"
+                                    android:paddingRight="5dp"
+                                    android:textColor="#fff"
+                                    android:text="Tidak Aktif"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:textSize="12sp"
+                                    android:textColor="#262626"
+                                    android:text="Status Kandang"/>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_kodekdg"
+                    android:orientation="vertical"
+                    >
+
+
+                    <!--                <androidx.cardview.widget.CardView-->
+                    <!--                    android:id="@+id/card_panen"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_marginLeft="10dp"-->
+                    <!--                    android:layout_marginRight="10dp"-->
+                    <!--                    android:layout_marginTop="10dp"-->
+                    <!--                    app:cardCornerRadius="8dp"-->
+                    <!--                    android:outlineAmbientShadowColor="#e9eff5"-->
+                    <!--                    app:cardElevation="7dp">-->
+
+                    <!--                    <RelativeLayout-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content">-->
+
+                    <!--                        <LinearLayout-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:orientation="vertical">-->
+
+                    <!--                            <LinearLayout-->
+                    <!--                                android:layout_width="match_parent"-->
+                    <!--                                android:layout_height="wrap_content"-->
+                    <!--                                android:layout_marginTop="10dp"-->
+                    <!--                                android:layout_marginRight="10dp"-->
+                    <!--                                android:layout_marginLeft="10dp"-->
+                    <!--                                android:padding="10dp"-->
+                    <!--                                android:orientation="horizontal">-->
+
+                    <!--                                <ImageView-->
+                    <!--                                    android:src="@drawable/ic_moving_truck"-->
+
+
+                    <!--                                    android:layout_width="50dp"-->
+                    <!--                                    android:layout_height="50dp"/>-->
+
+                    <!--                                <LinearLayout-->
+                    <!--                                    android:layout_width="match_parent"-->
+                    <!--                                    android:layout_height="wrap_content"-->
+                    <!--                                    android:layout_marginLeft="15dp"-->
+                    <!--                                    android:layout_gravity="center_vertical"-->
+                    <!--                                    android:orientation="vertical">-->
+
+
+                    <!--                                    <TextView-->
+
+                    <!--                                        android:layout_width="wrap_content"-->
+                    <!--                                        android:layout_height="wrap_content"-->
+                    <!--                                        android:text="Anda Telah Melakukan Panen Sebanyak"-->
+                    <!--                                        android:fontFamily="@font/maisonneuebook"-->
+                    <!--                                        android:textSize="12sp"-->
+                    <!--                                        android:gravity="center_vertical"-->
+                    <!--                                        android:drawablePadding="5dp"-->
+                    <!--                                        android:drawableStart="@drawable/ic_baseline_info_24"-->
+                    <!--                                        android:lineSpacingMultiplier="1.3"-->
+                    <!--                                        android:textColor="#262626"-->
+                    <!--                                        android:drawableLeft="@drawable/ic_information" />-->
+
+                    <!--                                    <LinearLayout-->
+                    <!--                                        android:layout_width="match_parent"-->
+                    <!--                                        android:layout_height="wrap_content"-->
+                    <!--                                        android:layout_marginTop="5dp"-->
+                    <!--                                        android:orientation="horizontal">-->
+
+                    <!--                                        <TextView-->
+                    <!--                                            android:id="@+id/txt_total_panen"-->
+                    <!--                                            android:layout_width="wrap_content"-->
+                    <!--                                            android:layout_height="wrap_content"-->
+                    <!--                                            android:text="200"-->
+                    <!--                                            android:fontFamily="@font/maisonneuebook"-->
+                    <!--                                            android:textSize="18sp"-->
+                    <!--                                            android:textColor="#262626"-->
+                    <!--                                            android:layout_marginRight="2dp"-->
+                    <!--                                            android:layout_marginLeft="2dp"-->
+                    <!--                                            android:gravity="center_vertical"/>-->
+
+                    <!--                                        <TextView-->
+
+                    <!--                                            android:layout_width="wrap_content"-->
+                    <!--                                            android:layout_height="wrap_content"-->
+                    <!--                                            android:text="Ekor"-->
+                    <!--                                            android:fontFamily="@font/maisonneuebook"-->
+                    <!--                                            android:textSize="14sp"-->
+                    <!--                                            android:layout_marginRight="2dp"-->
+                    <!--                                            android:layout_marginLeft="2dp"-->
+                    <!--                                            android:textColor="#262626"-->
+                    <!--                                            android:gravity="center_vertical"/>-->
+                    <!--                                    </LinearLayout>-->
+
+
+                    <!--                                    &lt;!&ndash;                    <androidx.appcompat.widget.SwitchCompat&ndash;&gt;-->
+                    <!--                                    &lt;!&ndash;                        android:id="@+id/switch_compat"&ndash;&gt;-->
+                    <!--                                    &lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--                                    &lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--                                    &lt;!&ndash;                        android:textSize="14sp"&ndash;&gt;-->
+                    <!--                                    &lt;!&ndash;                        android:textColor="#fff"&ndash;&gt;-->
+                    <!--                                    &lt;!&ndash;                        android:fontFamily="@font/maisonbold"&ndash;&gt;-->
+                    <!--                                    &lt;!&ndash;                        android:text="Mulai Produksi"/>&ndash;&gt;-->
+
+
+                    <!--                                </LinearLayout>-->
+
+                    <!--                            </LinearLayout>-->
+
+                    <!--                         -->
+
+                    <!--                        </LinearLayout>-->
+                    <!--                    </RelativeLayout>-->
+                    <!--                </androidx.cardview.widget.CardView>-->
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_akhiriperiode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:padding="10dp"
+                        android:text="Akhiri Periode"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:cornerRadius="15dp" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:outlineAmbientShadowColor="#e9eff5"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="7dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:background="@drawable/c">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/coba"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:fontFamily="@font/maison"
+                                        android:text="Detil Kandang"
+                                        android:textColor="#fff"
+                                        android:textSize="14sp" />
+
+                                    <com.facebook.shimmer.ShimmerFrameLayout
+                                        android:id="@+id/shimmerPeriode"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_margin="10dp">
+
+                                        <TextView
+                                            android:layout_width="100dp"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/bg_glaucous"
+                                            android:drawablePadding="5dp"
+                                            android:fontFamily="@font/maisonneuebook"
+                                            android:textColor="#fff"
+                                            android:textSize="12sp" />
+
+                                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginRight="10dp"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/text_title_periode"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginRight="2dp"
+                                            android:fontFamily="@font/maisonneuebook"
+                                            android:text="periode"
+                                            android:textColor="#fff"
+                                            android:visibility="gone" />
+
+                                        <TextView
+                                            android:id="@+id/periode"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="2dp"
+                                            android:layout_marginTop="10dp"
+                                            android:fontFamily="@font/maisonneuebook"
+                                            android:text="0"
+                                            android:textColor="#fff"
+
+                                            android:visibility="gone" />
+                                    </LinearLayout>
+
+
+                                    <!--                        <ImageView-->
+                                    <!--                            android:layout_width="16dp"-->
+                                    <!--                            android:layout_height="16dp"-->
+                                    <!--                            android:adjustViewBounds="true"-->
+                                    <!--                            android:src="@drawable/ic_edit"-->
+                                    <!--                            android:layout_margin="10dp"-->
+                                    <!--                            android:layout_alignParentRight="true"/>-->
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <com.facebook.shimmer.ShimmerFrameLayout
+                                        android:id="@+id/shimmerProgressKandang"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp">
+
+                                        <TextView
+                                            android:layout_width="70dp"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/bg_glaucous"
+                                            android:drawablePadding="5dp"
+                                            android:fontFamily="@font/maisonneuebook"
+                                            android:textColor="#fff"
+                                            android:textSize="12sp" />
+
+                                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                                    <TextView
+                                        android:id="@+id/text_progress"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:text="Tidak Bagus"
+                                        android:textColor="#fff"
+                                        android:textSize="13sp"
+                                        android:visibility="gone" />
+
+
+                                    <!--                        <TextView-->
+                                    <!--                            android:id="@+id/progres_hari"-->
+                                    <!--                            android:layout_width="wrap_content"-->
+                                    <!--                            android:layout_height="wrap_content"-->
+                                    <!--                            android:text="Hari Ke-17"-->
+                                    <!--                            android:textSize="12sp"-->
+                                    <!--                            android:textColor="#fff"-->
+                                    <!--                            android:layout_marginLeft="10dp"-->
+                                    <!--                            android:fontFamily="@font/maisonneuebook"/>-->
+
+
+                                    <com.facebook.shimmer.ShimmerFrameLayout
+                                        android:id="@+id/shimmerProgressKandangPercentage"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp">
+
+                                        <TextView
+                                            android:layout_width="40dp"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/bg_glaucous"
+                                            android:drawablePadding="5dp"
+                                            android:fontFamily="@font/maisonneuebook"
+                                            android:textColor="#fff"
+                                            android:textSize="12sp" />
+
+                                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                                    <TextView
+                                        android:id="@+id/text_progress_percentage"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:text="12%"
+                                        android:textColor="#fff"
+                                        android:textSize="12sp"
+                                        android:visibility="gone" />
+
+                                </RelativeLayout>
+
+
+                                <com.facebook.shimmer.ShimmerFrameLayout
+                                    android:id="@+id/shimmerProgressBarKandang"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginBottom="10dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/bg_glaucous"
+                                        android:drawablePadding="5dp"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:textColor="#fff"
+                                        android:textSize="12sp" />
+
+                                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                                <ProgressBar
+                                    android:id="@+id/pbars"
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:max="100"
+                                    android:min="10"
+                                    android:progressDrawable="@drawable/pb_drawable"
+                                    android:visibility="gone" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginBottom="10dp"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal"
+                                    android:weightSum="3">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:clickable="true"
+                                        android:gravity="center_horizontal"
+                                        android:orientation="vertical">
+
+                                        <com.facebook.shimmer.ShimmerFrameLayout
+                                            android:id="@+id/shimmerPopulasi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:layout_width="70dp"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/bg_glaucous"
+                                                android:drawablePadding="5dp"
+                                                android:fontFamily="@font/maisonneuebook"
+                                                android:textColor="#fff"
+                                                android:textSize="12sp" />
+
+                                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                                        <TextView
+                                            android:id="@+id/populasi_sekarang"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/maison"
+                                            android:text="200 Ekor"
+                                            android:textColor="#fff"
+                                            android:textSize="13sp"
+                                            android:visibility="gone" />
+
+                                        <TextView
+                                            android:id="@+id/populasi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/maison"
+                                            android:text="200 Ekor"
+                                            android:textColor="#fff"
+                                            android:textSize="13sp"
+                                            android:visibility="gone" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:fontFamily="@font/maisonneuebook"
+                                            android:text="Populasi Awal"
+                                            android:textColor="#fff"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:clickable="true"
+                                        android:gravity="center_horizontal"
+                                        android:orientation="vertical">
+
+                                        <com.facebook.shimmer.ShimmerFrameLayout
+                                            android:id="@+id/shimmerProgressPanen"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:layout_width="70dp"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/bg_glaucous"
+                                                android:drawablePadding="5dp"
+                                                android:fontFamily="@font/maisonneuebook"
+                                                android:textColor="#fff"
+                                                android:textSize="12sp" />
+
+                                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                                        <TextView
+                                            android:id="@+id/txt_total_panen"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/maison"
+                                            android:text="Tidak Bagus"
+                                            android:textColor="#fff"
+                                            android:textSize="13sp"
+                                            android:visibility="gone" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:fontFamily="@font/maisonneuebook"
+                                            android:text="Total Panen"
+                                            android:textColor="#fff"
+                                            android:textSize="12sp" />
+
+                                        <!--                            <com.facebook.shimmer.ShimmerFrameLayout-->
+                                        <!--                                android:id="@+id/shimmerProgressKandang"-->
+                                        <!--                                android:layout_width="wrap_content"-->
+                                        <!--                                android:layout_height="wrap_content">-->
+
+                                        <!--                                <TextView-->
+                                        <!--                                    android:layout_width="70dp"-->
+                                        <!--                                    android:layout_height="wrap_content"-->
+                                        <!--                                    android:background="@drawable/bg_glaucous"-->
+                                        <!--                                    android:fontFamily="@font/maisonneuebook"-->
+                                        <!--                                    android:textSize="12sp"-->
+                                        <!--                                    android:textColor="#fff"-->
+                                        <!--                                    android:drawablePadding="5dp"/>-->
+
+                                        <!--                            </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+                                        <!--                            <TextView-->
+                                        <!--                                android:id="@+id/text_progress"-->
+                                        <!--                                android:textSize="13sp"-->
+                                        <!--                                android:visibility="gone"-->
+                                        <!--                                android:fontFamily="@font/maison"-->
+                                        <!--                                android:layout_width="wrap_content"-->
+                                        <!--                                android:textColor="#fff"-->
+                                        <!--                                android:layout_height="wrap_content"-->
+                                        <!--                                android:text="Tidak Bagus"/>-->
+
+                                        <!--                            <TextView-->
+                                        <!--                                android:textSize="12sp"-->
+                                        <!--                                android:textColor="#fff"-->
+                                        <!--                                android:layout_marginTop="5dp"-->
+                                        <!--                                android:fontFamily="@font/maisonneuebook"-->
+                                        <!--                                android:layout_width="wrap_content"-->
+                                        <!--                                android:layout_height="wrap_content"-->
+                                        <!--                                android:text="Kesiapan Kandang"/>-->
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:clickable="true"
+                                        android:gravity="center_horizontal"
+                                        android:orientation="vertical">
+
+                                        <com.facebook.shimmer.ShimmerFrameLayout
+                                            android:id="@+id/shimmerTglChickIn"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:layout_width="70dp"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/bg_glaucous"
+                                                android:drawablePadding="5dp"
+                                                android:fontFamily="@font/maisonneuebook"
+                                                android:textColor="#fff"
+                                                android:textSize="12sp" />
+
+                                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                                        <TextView
+                                            android:id="@+id/txt_tanggal_chickin"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/maison"
+                                            android:paddingLeft="5dp"
+                                            android:paddingRight="5dp"
+                                            android:text="20-12-2021"
+                                            android:textColor="#fff"
+                                            android:textSize="13sp"
+                                            android:visibility="gone" />
+
+                                        <TextView
+                                            android:id="@+id/txt_bobot"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/maison"
+                                            android:paddingLeft="5dp"
+                                            android:paddingRight="5dp"
+                                            android:text="20-12-2021"
+                                            android:textColor="#fff"
+                                            android:textSize="13sp"
+                                            android:visibility="gone" />
+
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:fontFamily="@font/maisonneuebook"
+                                            android:text="Tanggal Chickin"
+                                            android:textColor="#fff"
+                                            android:textSize="12sp" />
+
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <!--                <ProgressBar-->
+                                <!--                    android:id="@+id/pbcontoh"-->
+                                <!--                    android:layout_width="match_parent"-->
+                                <!--                    android:layout_height="wrap_content"-->
+                                <!--                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>-->
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/maison"
+                            android:text="Menu Pengecekan"
+                            android:textColor="#262626"
+                            android:textSize="14sp" />
+
+                        <!--                    -->
+                        <!--                    <RadioGroup-->
+                        <!--                        android:layout_width="wrap_content"-->
+                        <!--                        android:layout_height="wrap_content">-->
+                        <!--                        -->
+                        <!--                        <RadioButton-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="cek 1"-->
+                        <!--                            android:id="@+id/radic_cek1"/>-->
+
+                        <!--                        <RadioButton-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="cek 2"-->
+                        <!--                            android:id="@+id/radic_cek2"/>-->
+
+                        <!--                    </RadioGroup>-->
+
+                        <!--                    <Button-->
+                        <!--                        android:id="@+id/btncounter"-->
+                        <!--                        android:layout_width="wrap_content"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:text="btn"/>-->
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <LinearLayout
+                                android:id="@+id/menu_persiapan_kandang"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:adjustViewBounds="true"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_cage__1_" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:gravity="center_horizontal"
+                                    android:text="Persiapan \nKandang"
+                                    android:textAlignment="center"
+                                    android:textColor="#262626"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:id="@+id/menu_cekinventory"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:adjustViewBounds="true"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_product" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:gravity="center_horizontal"
+                                    android:text="Inventory"
+                                    android:textAlignment="center"
+                                    android:textColor="#262626"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/menu_ayam_masuk"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:adjustViewBounds="true"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_hen" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:gravity="center_horizontal"
+                                    android:text="Chickin"
+                                    android:textAlignment="center"
+                                    android:textColor="#262626"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/menu_cekharian"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:adjustViewBounds="true"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_checklist_2" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:gravity="center_horizontal"
+                                    android:text="Pengecekan \nHarian"
+                                    android:textAlignment="center"
+                                    android:textColor="#262626"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+
+                            <LinearLayout
+                                android:id="@+id/menu_ceksampel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="42dp"
+                                    android:adjustViewBounds="true"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_sample" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:gravity="center_horizontal"
+                                    android:text="Pengecekan \nSampel"
+                                    android:textAlignment="center"
+                                    android:textColor="#262626"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/menu_panen_penimbangan"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:adjustViewBounds="true"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_production" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:gravity="center_horizontal"
+                                    android:text="Panen &amp;\nPenimbangan"
+                                    android:textAlignment="center"
+                                    android:textColor="#262626"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/menu_performa_kandang"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:adjustViewBounds="true"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_performance" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:gravity="center_horizontal"
+                                    android:text="Performa \nKandang"
+                                    android:textAlignment="center"
+                                    android:textColor="#262626"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+
+                            <!--                <Button-->
+                            <!--                    android:id="@+id/coba"-->
+                            <!--                    android:layout_width="wrap_content"-->
+                            <!--                    android:layout_height="wrap_content"-->
+                            <!--                    android:text="Coba"/>-->
+
+                            <!--                <TextView-->
+                            <!--                    android:id="@+id/ambil_tanggal"-->
+                            <!--                    android:layout_width="wrap_content"-->
+                            <!--                    android:layout_height="wrap_content"-->
+                            <!--                    android:text="text"/>-->
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,418 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    tools:context="org.d3ifcool.testing.Profil.ProfileChildMenu.DataHarianMenu">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        app:elevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBarDataHarian"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="#fff"
+                app:navigationIcon="?homeAsUpIndicator"
+                app:title="Data Harian" />
+
+            <RelativeLayout
+                android:id="@+id/btn_cetak_pdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/toolBarDataHarian"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:clickable="true"
+                app:layout_constraintTop_toTopOf="@+id/toolBarDataHarian"
+                android:layout_marginRight="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_pdf_file" />
+
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:gravity="center_vertical"
+                            android:text="Pilih Kandang"
+                            android:textColor="#262626"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:text="Pilih Berdasarkan Kode Kandang"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="12sp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_kandang"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/custom_input" />
+
+
+                        <LinearLayout
+                            android:id="@+id/linearSpinnerPeriode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:gravity="center_vertical"
+                            android:text="Pilih Periode"
+                            android:textColor="#262626"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_periode"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/custom_input"
+                            android:spinnerMode="dialog" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:visibility="gone"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/idkandang_getharian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:gravity="center_vertical"
+                            android:visibility="gone"
+                            android:textColor="#262626"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/periode_getharian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:gravity="center_vertical"
+                            android:visibility="gone"
+                            android:textColor="#262626"
+                            android:textSize="16sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+
+                            <TextView
+                                android:id="@+id/kode_kandang"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:text="Petugas"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/kode_blok"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:text="Petugas"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="12sp" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/txt_id_user_home"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:gravity="center_horizontal"
+                                    android:text="Id • 12"
+                                    android:textAlignment="center"
+                                    android:textColor="#262626" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:stretchColumns="1,2,3,4,5,8"
+                    android:layout_margin="8dp">
+                    <TableRow>
+                        <TextView
+                            android:fontFamily="@font/maison"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#262626"
+                            android:text="Usia"
+                            android:layout_column="1"/>
+
+                        <TextView
+                            android:fontFamily="@font/maison"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#262626"
+                            android:text="Tanggal"
+                            android:layout_column="1"/>
+
+                        <TextView
+                            android:fontFamily="@font/maison"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#262626"
+                            android:text="Sakit"
+                            android:layout_column="1"/>
+
+                        <TextView
+                            android:fontFamily="@font/maison"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#262626"
+                            android:text="Mati"
+                            android:layout_column="1"/>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/maison"
+                            android:gravity="center"
+                            android:text="Pakan"
+                            android:textColor="#262626"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCheckHarian"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="match_parent"
+                        tools:listitem="@layout/list_check_harian"/>
+                </TableLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:paddingTop="5dp"-->
+<!--                    android:paddingBottom="5dp"-->
+<!--                    android:gravity="center">-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/txt_title_bobot"-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/maison"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:textColor="#262626"-->
+<!--                        android:text="Usia"/>-->
+
+
+
+<!--                    <LinearLayout-->
+<!--                        android:weightSum="4"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:gravity="center"-->
+<!--                            android:fontFamily="@font/maison"-->
+<!--                            android:text="Tanggal"-->
+<!--                            android:textColor="#262626"-->
+<!--                            android:textSize="14sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:gravity="center"-->
+<!--                            android:fontFamily="@font/maison"-->
+<!--                            android:text="Mati"-->
+<!--                            android:textColor="#262626"-->
+<!--                            android:textSize="14sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:gravity="center"-->
+<!--                            android:fontFamily="@font/maison"-->
+<!--                            android:text="Sakit"-->
+<!--                            android:textColor="#262626"-->
+<!--                            android:textSize="14sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:gravity="center"-->
+<!--                            android:fontFamily="@font/maison"-->
+<!--                            android:text="Pakan Pakai"-->
+<!--                            android:textColor="#262626"-->
+<!--                            android:textSize="14sp" />-->
+<!--                    </LinearLayout>-->
+
+
+
+
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/remove"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:fontFamily="@font/maison"-->
+<!--                        android:textColor="#e40017"-->
+<!--                        android:text="Aksi"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:padding="5dp"-->
+<!--                        android:layout_gravity="center_vertical"/>-->
+
+
+<!--                </LinearLayout>-->
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+<!--    tools:context="org.d3ifcool.testing.Profil.ProfileChildMenu.DataHarianMenu">-->

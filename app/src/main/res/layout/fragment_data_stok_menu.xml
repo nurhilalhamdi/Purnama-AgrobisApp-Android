@@ -1,0 +1,514 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    tools:context="org.d3ifcool.testing.Profil.ProfileChildMenu.DataSampelMenu">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        app:elevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBarDataStok"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="#fff"
+                app:navigationIcon="?homeAsUpIndicator"
+                app:title="Data Stok" />
+
+            <RelativeLayout
+                android:id="@+id/btn_cetak_pdfStok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/toolBarDataStok"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:clickable="true"
+                app:layout_constraintTop_toTopOf="@+id/toolBarDataStok"
+                android:layout_marginRight="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_pdf_file" />
+
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/idkandang_stok"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:gravity="center_vertical"
+                            android:text="Pilih Kandang"
+                            android:visibility="gone"
+                            android:textColor="#262626"
+                            android:textSize="16sp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:gravity="center_vertical"
+                            android:text="Pilih Kategori"
+                            android:textColor="#262626"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:text="Pilih Kategori Untuk Melihat Stok"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="12sp" />
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:scrollbars="none">
+
+
+                            <com.google.android.material.chip.ChipGroup
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                app:singleSelection="true"
+                                >
+
+                                <com.google.android.material.chip.Chip
+                                    android:id="@+id/kgPakan_stok"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pakan"
+                                    android:textAppearance="@style/chipText"
+                                    app:chipIconSize="16sp"
+                                    style="@style/CustomChip"
+                                    android:textSize="12sp"/>
+
+                                <com.google.android.material.chip.Chip
+                                    android:id="@+id/kgObat_stok"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Obat"
+                                    app:chipIconSize="16sp"
+                                    android:textAppearance="@style/chipText"
+                                    style="@style/CustomChip"
+                                    android:textSize="12sp"/>
+
+                                <com.google.android.material.chip.Chip
+                                    android:id="@+id/kgVitamin_Stok"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Vitamin"
+                                    app:chipIconSize="16sp"
+                                    android:textAppearance="@style/chipText"
+                                    style="@style/CustomChip"
+                                    android:textSize="12sp"/>
+
+                                <com.google.android.material.chip.Chip
+                                    android:id="@+id/kgVaksin_Stok"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Vaksin"
+                                    android:textAppearance="@style/chipText"
+                                    app:chipIconSize="16sp"
+                                    style="@style/CustomChip"
+                                    android:textSize="12sp"/>
+
+                                <com.google.android.material.chip.Chip
+                                    android:id="@+id/kgAlat_Stok"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Peralatan Kandang"
+                                    app:chipIconSize="16sp"
+                                    style="@style/CustomChip"
+                                    android:textAppearance="@style/chipText"
+                                    android:textSize="12sp"/>
+
+                                <com.google.android.material.chip.Chip
+                                    android:id="@+id/kgLainnya_Stok"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lainnya"
+                                    app:chipIconSize="16sp"
+                                    style="@style/CustomChip"
+                                    android:textAppearance="@style/chipText"
+                                    android:textSize="12sp"/>
+                            </com.google.android.material.chip.ChipGroup>
+
+
+                        </HorizontalScrollView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:gravity="center_vertical"
+                            android:text="Pilih Kandang"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#262626"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:text="Pilih Berdasarkan Kode Kandang"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="12sp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_kandang_stok"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/custom_input" />
+
+
+
+
+
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:weightSum="2"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center_horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:clickable="true"
+                                    android:gravity="center_horizontal">
+
+
+
+                                    <TextView
+                                        android:id="@+id/txt_total_stok"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/maison"
+                                        android:textSize="18sp"
+                                        android:textColor="#5666d5"
+                                        android:text="0"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:textSize="14sp"
+                                        android:layout_marginTop="5dp"
+                                        android:textColor="#262626"
+                                        android:text="Total Stok Barang"/>
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:clickable="true"
+                                    android:gravity="center_horizontal">
+
+
+                                    <TextView
+                                        android:id="@+id/txt_total_jenis"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/maison"
+                                        android:textSize="18sp"
+                                        android:paddingLeft="5dp"
+
+                                        android:paddingRight="5dp"
+                                        android:textColor="#5666d5"
+                                        android:text="0"/>
+
+                                    <TextView
+                                        android:layout_marginTop="5dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:textSize="14sp"
+                                        android:textColor="#262626"
+                                        android:text="Jumlah Jenis Barang"/>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCheckStokPakan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    tools:listitem="@layout/list_check_stok"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCheckStokObat"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/list_check_stok"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCheckStokVitamin"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/list_check_stok"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCheckStokVaksin"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/list_check_stok"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCheckStokAlat"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/list_check_stok"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCheckStokItemLain"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/list_check_stok"/>
+
+
+
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    android:paddingTop="5dp"-->
+                <!--                    android:paddingBottom="5dp"-->
+                <!--                    android:gravity="center">-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/txt_title_bobot"-->
+                <!--                        android:layout_width="40dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:fontFamily="@font/maison"-->
+                <!--                        android:textSize="14sp"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:layout_marginLeft="10dp"-->
+                <!--                        android:textColor="#262626"-->
+                <!--                        android:text="Usia"/>-->
+
+
+
+                <!--                    <LinearLayout-->
+                <!--                        android:weightSum="4"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_weight="1">-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_weight="1"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:fontFamily="@font/maison"-->
+                <!--                            android:text="Tanggal"-->
+                <!--                            android:textColor="#262626"-->
+                <!--                            android:textSize="14sp" />-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_weight="1"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:fontFamily="@font/maison"-->
+                <!--                            android:text="Mati"-->
+                <!--                            android:textColor="#262626"-->
+                <!--                            android:textSize="14sp" />-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_weight="1"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:fontFamily="@font/maison"-->
+                <!--                            android:text="Sakit"-->
+                <!--                            android:textColor="#262626"-->
+                <!--                            android:textSize="14sp" />-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_weight="1"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:fontFamily="@font/maison"-->
+                <!--                            android:text="Pakan Pakai"-->
+                <!--                            android:textColor="#262626"-->
+                <!--                            android:textSize="14sp" />-->
+                <!--                    </LinearLayout>-->
+
+
+
+
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/remove"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginRight="10dp"-->
+                <!--                        android:fontFamily="@font/maison"-->
+                <!--                        android:textColor="#e40017"-->
+                <!--                        android:text="Aksi"-->
+                <!--                        android:textSize="14sp"-->
+                <!--                        android:padding="5dp"-->
+                <!--                        android:layout_gravity="center_vertical"/>-->
+
+
+                <!--                </LinearLayout>-->
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--    tools:context="org.d3ifcool.testing.Profil.ProfileChildMenu.DataHarianMenu">-->
+

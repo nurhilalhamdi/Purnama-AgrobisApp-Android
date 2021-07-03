@@ -1,0 +1,220 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="org.d3ifcool.testing.MedisKu.MedisKuFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f5f5">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="MedisKu"
+            app:contentScrim="@color/white"
+            app:expandedTitleTextAppearance="@style/expandedBarTextStyle"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp">
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/title"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_alignParentLeft="true"-->
+                    <!--                        android:layout_alignParentRight="true"-->
+                    <!--                        android:text="Tambahkan kandang\nuntuk di kelola"-->
+                    <!--                        android:fontFamily="@font/maison"-->
+                    <!--                        android:layout_marginLeft="16dp"-->
+                    <!--                        android:textSize="16sp"-->
+                    <!--                        android:gravity="center_vertical"-->
+                    <!--                        android:textColor="#262626"/>-->
+
+                    <!--                    <TextView-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:text="12 Kandang aktif"-->
+                    <!--                        android:fontFamily="@font/maisonneuebook"-->
+                    <!--                        android:layout_marginTop="10dp"-->
+                    <!--                        android:layout_marginLeft="16dp"-->
+                    <!--                        android:textSize="12sp"-->
+                    <!--                        android:gravity="center_vertical"-->
+                    <!--                        android:layout_below="@id/title"-->
+                    <!--                        android:textColor="#262626"/>-->
+
+                    <ImageView
+                        android:id="@+id/imgMedisKu"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:adjustViewBounds="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="24dp"
+                        android:src="@drawable/ic_medisku"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ketahui penyakit\npada ayam anda"
+                            android:fontFamily="@font/maison"
+                            android:layout_marginLeft="16dp"
+                            android:textSize="18sp"
+                            android:gravity="center_vertical"
+                            android:textColor="#262626"/>
+
+                        <LinearLayout
+                            android:id="@+id/linearContent1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="10dp">
+
+
+                                <View
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginTop="1dp"
+                                    android:background="@drawable/ic_baseline_info_24"/>
+
+                                <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="5dp"
+                                    android:lineSpacingMultiplier="1.2"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:text="Klik salah satu penyakit untuk\nmelihat info lebih lanjut"
+                                    android:textColor="#262626"
+                                    android:textSize="12sp" />
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBarIdMedisku"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                app:titleTextColor="@color/white"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="?homeAsUpIndicator"
+                >
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_height="match_parent">
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshMedis"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <SearchView
+                        android:id="@+id/edtSearchMedisku"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/search_bar_background"
+                        android:layout_margin="10dp"
+                        android:queryHint="Cari penyakit"
+                        android:textColorHint="#7f7f7f"
+                        android:textSize="14sp"
+                        android:queryBackground="@android:color/transparent"
+                        android:iconifiedByDefault="false"
+                        android:textColor="#7f7f7f"
+                        android:fontFamily="@font/maisonneuebook" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/bg_accept"/>
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/maisonbold"
+                            android:text="Penyakit"
+                            android:textColor="#262626"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_medis"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

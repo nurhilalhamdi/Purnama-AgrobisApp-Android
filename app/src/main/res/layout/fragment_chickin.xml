@@ -1,0 +1,300 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="org.d3ifcool.testing.Chickin.ChickinFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f5f5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBarChickin"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="?homeAsUpIndicator"
+                app:title="ChickIn"
+                app:titleTextColor="#262626" />
+
+            <RelativeLayout
+                android:id="@+id/btn_simpan_chickin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/toolBarChickin"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_accept"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:clickable="true"
+                app:layout_constraintTop_toTopOf="@+id/toolBarChickin"
+                android:layout_marginRight="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/maison"
+                    android:text="Simpan"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Periode Chickin"
+                    android:textSize="12sp"
+                    android:textColor="#262626"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/maisonneuebook" />
+
+                <EditText
+                    android:id="@+id/edt_periode_ayam_chickin"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:height="40dp"
+                    android:paddingLeft="10dp"
+                    android:inputType="number"
+                    android:hint="Periode"
+                    android:textColorHint="#7f7f7f"
+                    android:textSize="14sp"
+                    android:textColor="#7f7f7f"
+                    android:fontFamily="@font/maisonneuebook" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type Produk"
+                    android:textSize="12sp"
+                    android:textColor="#262626"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/maisonneuebook" />
+
+                    <Spinner
+                        android:id="@+id/spinnerType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dialog"
+                        android:background="@drawable/edittext_bottom_line"
+                        />
+
+                    <Spinner
+                        android:id="@+id/spinnerJenis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dialog"
+                        android:background="@drawable/edittext_bottom_line"
+                        />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jumlah Populasi Masuk"
+                    android:textSize="12sp"
+                    android:textColor="#262626"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/maisonneuebook" />
+
+                <EditText
+                    android:id="@+id/edt_jumlah_chickin"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:height="40dp"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:hint="Jumlah (Ekor)"
+                    android:textColorHint="#7f7f7f"
+                    android:textSize="14sp"
+                    android:textColor="#7f7f7f"
+                    android:fontFamily="@font/maisonneuebook" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Berat DOC/Ekor (gram)"
+                    android:textSize="12sp"
+                    android:textColor="#262626"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/maisonneuebook" />
+
+                <EditText
+                    android:id="@+id/edt_berat_doc"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:height="40dp"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:hint="Berat DOC/Ekor (gram)"
+                    android:textColorHint="#7f7f7f"
+                    android:textSize="14sp"
+                    android:textColor="#7f7f7f"
+                    android:fontFamily="@font/maisonneuebook" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kondisi Chickin"
+                    android:textSize="12sp"
+                    android:textColor="#262626"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/maisonneuebook" />
+
+                <EditText
+                    android:id="@+id/edt_kondisi_ayam_chickin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:height="40dp"
+                    android:paddingLeft="10dp"
+                    android:hint="Kondisi Ayam Masuk"
+                    android:textColorHint="#7f7f7f"
+                    android:textSize="14sp"
+                    android:textColor="#7f7f7f"
+                    android:fontFamily="@font/maisonneuebook" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Harga Satuan"
+                    android:textSize="12sp"
+                    android:textColor="#262626"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/maisonneuebook" />
+
+                <EditText
+                    android:id="@+id/edt_harga_satuan_chickin"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:height="40dp"
+                    android:paddingLeft="10dp"
+                    android:inputType="number|numberDecimal"
+                    android:hint="Harga Ayam Masuk"
+                    android:textColorHint="#7f7f7f"
+                    android:textSize="14sp"
+                    android:textColor="#7f7f7f"
+                    android:fontFamily="@font/maisonneuebook" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal Chickin"
+                    android:textSize="12sp"
+                    android:textColor="#262626"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/maisonneuebook" />
+
+                <TextView
+                    android:id="@+id/txt_tanggal_ayam_chickin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:height="40dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:hint="Tanggal Ayam Masuk"
+                    android:clickable="true"
+                    android:textColorHint="#7f7f7f"
+                    android:textSize="14sp"
+                    android:drawablePadding="5dp"
+                    android:drawableLeft="@drawable/ic_calendar"
+                    android:textColor="#7f7f7f"
+                    android:fontFamily="@font/maisonneuebook" />
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

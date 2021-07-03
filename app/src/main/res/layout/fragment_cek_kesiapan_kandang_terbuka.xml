@@ -1,0 +1,658 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="org.d3ifcool.testing.KesiapanKandang.CekKesiapanKandangTerbukaFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f5f5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBarKesiapanKandangTerbuka"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="?homeAsUpIndicator"
+                app:title="Persiapan Kandang"
+                app:titleTextColor="#262626" />
+
+            <RelativeLayout
+                android:id="@+id/btn_simpan_persiapan_kandang_terbuka"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/toolBarKesiapanKandangTerbuka"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_accept"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:clickable="true"
+                app:layout_constraintTop_toTopOf="@+id/toolBarKesiapanKandangTerbuka"
+                android:layout_marginRight="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/maison"
+                    android:text="Simpan"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutKandangTerbuka"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kandang Terbuka"
+                android:fontFamily="@font/maison"
+                android:textSize="16sp"
+                android:layout_margin="10dp"
+                android:layout_centerVertical="true"
+                android:textColor="#262626"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchKandangTerbuka"
+                    android:layout_width="wrap_content"
+                    android:text="Aktifkan"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:textColor="#262626"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:text="Menentukan Lokasi"
+                    android:textColor="#262626"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:layout_marginLeft="10dp"
+                            android:text="Arah kandang sebaiknya membujur dari timur ke barat atau sebaliknya"/>
+
+
+                    <RadioGroup
+                        android:id="@+id/radio_grup_1"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/rbYa1"
+                            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple_700"
+                            android:buttonTint="@color/purple_700"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/maison"
+                            android:text="Ya"/>
+
+                        <RadioButton
+                            android:id="@+id/rbTidak1"
+                            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple_700"
+                            android:fontFamily="@font/maison"
+                            android:layout_marginRight="10dp"
+                            android:buttonTint="@color/purple_700"
+                            android:text="Tidak"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:layout_marginLeft="10dp"
+                            android:text="Tanah datar dan lebih tinggi dari tanah sekitarnya."/>
+
+
+                    <RadioGroup
+                        android:id="@+id/radio_grup_2"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+
+
+                        <RadioButton
+                            android:id="@+id/rbYa2"
+                            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple_700"
+                            android:buttonTint="@color/purple_700"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/maison"
+                            android:text="Ya"/>
+
+                        <RadioButton
+                            android:id="@+id/rbTidak2"
+                            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple_700"
+                            android:fontFamily="@font/maison"
+                            android:layout_marginRight="10dp"
+                            android:buttonTint="@color/purple_700"
+                            android:text="Tidak"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:layout_marginLeft="10dp"
+                            android:text="Sumber air tanah mencukupi"/>
+
+
+                    <RadioGroup
+                        android:id="@+id/radio_grup_4"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+
+
+                        <RadioButton
+                               android:id="@+id/rbYa4"
+                            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple_700"
+                            android:buttonTint="@color/purple_700"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/maison"
+                            android:text="Ya"/>
+
+                        <RadioButton
+                            android:id="@+id/rbTidak4"
+                            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple_700"
+                            android:fontFamily="@font/maison"
+                            android:layout_marginRight="10dp"
+                            android:buttonTint="@color/purple_700"
+                            android:text="Tidak"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:layout_marginLeft="10dp"
+                            android:text="Tidak ada pohon/bangunan yang mengganggu aliran udara disekitarnya"/>
+
+
+                <RadioGroup
+                    android:id="@+id/radio_grup_6"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+
+
+                    <RadioButton
+                           android:id="@+id/rbYa6"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/purple_700"
+                        android:buttonTint="@color/purple_700"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/maison"
+                        android:text="Ya"/>
+
+                    <RadioButton
+                        android:id="@+id/rbTidak6"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/purple_700"
+                        android:fontFamily="@font/maison"
+                        android:layout_marginRight="10dp"
+                        android:buttonTint="@color/purple_700"
+                        android:text="Tidak"/>
+
+                </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:text="Peralatan Kandang"
+                    android:textColor="#262626"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:layout_marginLeft="10dp"
+                            android:text="Instalasi air minum (Sumber air dapat berupa sumur gali atau sumur bor dengan kedalam antara 8-20 m."/>
+
+
+                    <RadioGroup
+                        android:id="@+id/radio_grup_7"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+
+
+                    <RadioButton
+                           android:id="@+id/rbYa7"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/purple_700"
+                        android:buttonTint="@color/purple_700"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/maison"
+                        android:text="Ya"/>
+
+                    <RadioButton
+                        android:id="@+id/rbTidak7"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/purple_700"
+                        android:fontFamily="@font/maison"
+                        android:layout_marginRight="10dp"
+                        android:buttonTint="@color/purple_700"
+                        android:text="Tidak"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:layout_marginLeft="10dp"
+                            android:text="Instalasi tempat pakan"/>
+
+
+                    <RadioGroup
+                        android:id="@+id/radio_grup_8"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+
+
+                        <RadioButton
+                               android:id="@+id/rbYa8"
+                            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple_700"
+                            android:buttonTint="@color/purple_700"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/maison"
+                            android:text="Ya"/>
+
+                        <RadioButton
+                            android:id="@+id/rbTidak8"
+                            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple_700"
+                            android:fontFamily="@font/maison"
+                            android:layout_marginRight="10dp"
+                            android:buttonTint="@color/purple_700"
+                            android:text="Tidak"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:layout_marginLeft="10dp"
+                            android:text="Instalasi listrik"/>
+
+
+                    <RadioGroup
+                        android:id="@+id/radio_grup_9"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+
+
+                        <RadioButton
+                               android:id="@+id/rbYa9"
+                            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple_700"
+                            android:buttonTint="@color/purple_700"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/maison"
+                            android:text="Ya"/>
+
+                        <RadioButton
+                            android:id="@+id/rbTidak9"
+                            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple_700"
+                            android:fontFamily="@font/maison"
+                            android:layout_marginRight="10dp"
+                            android:buttonTint="@color/purple_700"
+                            android:text="Tidak"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:layout_marginLeft="10dp"
+                            android:text="Tirai atau Layar"/>
+
+
+                    <RadioGroup
+                        android:id="@+id/radio_grup_10"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+
+
+                        <RadioButton
+                               android:id="@+id/rbYa10"
+                            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple_700"
+                            android:buttonTint="@color/purple_700"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/maison"
+                            android:text="Ya"/>
+
+                        <RadioButton
+                            android:id="@+id/rbTidak10"
+                            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple_700"
+                            android:fontFamily="@font/maison"
+                            android:layout_marginRight="10dp"
+                            android:buttonTint="@color/purple_700"
+                            android:text="Tidak"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:layout_marginLeft="10dp"
+                            android:text="Alas Litter"/>
+
+
+                    <RadioGroup
+                           android:id="@+id/radio_grup_11"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+
+
+                        <RadioButton
+                                      android:id="@+id/rbYa11"
+                            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple_700"
+                            android:buttonTint="@color/purple_700"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/maison"
+                            android:text="Ya"/>
+
+                        <RadioButton
+                                   android:id="@+id/rbTidak11"
+                            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/purple_700"
+                            android:fontFamily="@font/maison"
+                            android:layout_marginRight="10dp"
+                            android:buttonTint="@color/purple_700"
+                            android:text="Tidak"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:layout_marginLeft="10dp"
+                            android:text="Instalasi Pemanas"/>
+
+
+                <RadioGroup
+                       android:id="@+id/radio_grup_12"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+
+
+                    <RadioButton
+                                  android:id="@+id/rbYa12"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/purple_700"
+                        android:buttonTint="@color/purple_700"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/maison"
+                        android:text="Ya"/>
+
+                    <RadioButton
+                               android:id="@+id/rbTidak12"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/purple_700"
+                        android:fontFamily="@font/maison"
+                        android:layout_marginRight="10dp"
+                        android:buttonTint="@color/purple_700"
+                        android:text="Tidak"/>
+
+                </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

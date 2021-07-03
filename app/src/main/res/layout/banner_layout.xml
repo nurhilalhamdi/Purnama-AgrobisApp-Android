@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/doa_ampunan_allah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="16dp"
+        android:outlineAmbientShadowColor="#e9eff5"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/tvIdKandang"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+
+
+                    <TextView
+                        android:id="@+id/tvKodeKandang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0000123 • 0001444"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/maison"
+                        android:textColor="#262626"/>
+
+                    <TextView
+                        android:id="@+id/tvAlamatKandang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alamat"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:textColor="#262626" />
+
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="12dp">
+
+                   <TextView
+                       android:id="@+id/tvStatusKandang"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Tidak Aktif"
+                       android:maxLines="2"
+                       android:ellipsize="end"
+                       android:textSize="12sp"
+                       android:textColor="#fff"
+                       android:paddingLeft="5dp"
+                       android:paddingRight="5dp"
+                       android:layout_centerVertical="true"
+                       android:fontFamily="@font/maisonneuebook" />
+
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:layout_alignParentRight="true"
+                       android:layout_centerVertical="true">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Detil Kandang"
+                           android:textSize="12sp"
+                           android:layout_marginRight="10dp"
+                           android:layout_gravity="center_vertical"
+                           android:textColor="#5666d5"
+                           android:fontFamily="@font/maisonneuebook"/>
+
+                       <ImageView
+                           android:layout_width="20dp"
+                           android:layout_height="20dp"
+                           android:layout_gravity="center_vertical"
+                           android:src="@drawable/view_btn"/>
+
+                   </LinearLayout>
+               </RelativeLayout>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

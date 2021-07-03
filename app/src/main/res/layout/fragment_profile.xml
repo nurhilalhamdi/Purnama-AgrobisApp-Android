@@ -1,0 +1,433 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    tools:context="org.d3ifcool.testing.Profil.ProfileFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        app:elevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBarProfile"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="#fff"
+                app:navigationIcon="?homeAsUpIndicator"
+                app:title="Profile" />
+
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/btn_edit_profile"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/toolBarProfile"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:paddingLeft="5dp"-->
+<!--                android:paddingRight="5dp"-->
+<!--                android:clickable="true"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/toolBarProfile"-->
+<!--                android:layout_marginRight="16dp">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/ic_inspiration"/>-->
+
+
+<!--            </RelativeLayout>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/avatarimage"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/txt_nama_petugas_home"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:gravity="center_vertical"
+                            android:text="Yono"
+                            android:textColor="#262626"
+                            android:textSize="16sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txt_status_petugas_profile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_accept"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text="Aktif"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:text="• Petugas"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="12sp" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/txt_id_user_home"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:gravity="center_horizontal"
+                                    android:text="Id • 12"
+                                    android:textAlignment="center"
+                                    android:textColor="#262626" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+                    
+                    <TextView
+                        android:id="@+id/txt_notlp_petugas_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0823231"
+                        android:textSize="14sp"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:gravity="center_vertical"
+                        android:textColor="@android:color/darker_gray"
+                        android:drawableTint="@android:color/darker_gray"
+                        android:drawableStart="@drawable/ic_baseline_local_phone_24"
+                        android:drawableLeft="@drawable/ic_baseline_local_phone_24" />
+
+                    <TextView
+                        android:id="@+id/txt_email_petugas_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="hilal"
+                        android:layout_marginTop="10dp"
+                        android:textSize="14sp"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/maisonneuebook"
+                        android:gravity="center_vertical"
+                        android:textColor="@android:color/darker_gray"
+                        android:drawableTint="@android:color/darker_gray"
+                        android:drawableStart="@drawable/ic_baseline_email_24"
+                        android:drawableLeft="@drawable/ic_baseline_email_24" />
+
+                    
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+
+
+
+
+                <LinearLayout
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/data_harian_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Data Harian"
+                        android:drawableStart="@drawable/ic_checklist"
+                        android:gravity="center_vertical"
+                        android:textColor="#262626"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/maison"
+                        android:textSize="16sp"
+                        android:drawableLeft="@drawable/ic_information"
+                        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:drawableTint="#5666d5" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/data_sampel_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Data Sampel"
+                        android:drawableStart="@drawable/ic_blood_test"
+                        android:gravity="center_vertical"
+                        android:textColor="#262626"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/maison"
+                        android:textSize="16sp"
+                        android:drawableTint="#5666d5"
+                        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:drawableLeft="@drawable/ic_information" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/data_stok_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Data Stok"
+                        android:drawableStart="@drawable/ic_stock"
+                        android:gravity="center_vertical"
+                        android:textColor="#262626"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/maison"
+                        android:textSize="16sp"
+                        android:drawableTint="#5666d5"
+                        android:drawableLeft="@drawable/ic_information"
+                        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/data_panen_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Data Panen"
+                        android:drawableStart="@drawable/ic_harvester"
+                        android:gravity="center_vertical"
+                        android:textColor="#262626"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/maison"
+                        android:textSize="16sp"
+                        android:drawableTint="#5666d5"
+                        android:drawableLeft="@drawable/ic_harvester"
+                        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/data_rumus_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rumus Hitungan"
+                        android:drawableStart="@drawable/ic_formula"
+                        android:gravity="center_vertical"
+                        android:textColor="#262626"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/maison"
+                        android:textSize="16sp"
+                        android:drawableTint="#5666d5"
+                        android:drawableLeft="@drawable/ic_information"
+                        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/data_panduan_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Panduan"
+                        android:drawableStart="@drawable/ic_guide"
+                        android:gravity="center_vertical"
+                        android:textColor="#262626"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/maison"
+                        android:textSize="16sp"
+                        android:drawableTint="#5666d5"
+                        android:drawableLeft="@drawable/ic_information"
+                        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/data_tentang_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tentang Aplikasi"
+                        android:drawableStart="@drawable/ic_information"
+                        android:gravity="center_vertical"
+                        android:textColor="#262626"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/maison"
+                        android:textSize="16sp"
+                        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:drawableTint="#5666d5"
+                        android:drawableLeft="@drawable/ic_information" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

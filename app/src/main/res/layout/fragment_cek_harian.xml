@@ -1,0 +1,1643 @@
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    tools:context="org.d3ifcool.testing.PengecekanHarian.CekHarianFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        app:elevation="0dp">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBarCekHarian"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="?homeAsUpIndicator"
+                app:title="Cek Harian" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!-- TODO: Update blank fragment layout -->
+
+
+                <!--            <LinearLayout-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:orientation="vertical">-->
+
+
+
+
+                <!--                <androidx.cardview.widget.CardView-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    app:cardCornerRadius="10dp"-->
+                <!--                    app:cardElevation="10dp"-->
+                <!--                    android:layout_margin="10dp">-->
+                <!--                    <LinearLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_margin="10dp"-->
+                <!--                        android:orientation="vertical">-->
+
+                <!--                        <RelativeLayout-->
+                <!--                            android:layout_width="match_parent"-->
+                <!--                            android:layout_marginLeft="10dp"-->
+                <!--                            android:layout_marginRight="10dp"-->
+                <!--                            android:layout_height="wrap_content">-->
+
+                <!--                            <TextView-->
+                <!--                                android:id="@+id/s"-->
+                <!--                                android:layout_width="wrap_content"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:text="Total Data Sementara"-->
+                <!--                                android:textSize="16sp"-->
+                <!--                                android:textColor="#5666d5"-->
+                <!--                                android:fontFamily="@font/maison"-->
+                <!--                                android:layout_alignParentLeft="true"-->
+                <!--                                />-->
+
+                <!--                            <TextView-->
+                <!--                                android:id="@+id/txt_usia_coba"-->
+                <!--                                android:layout_width="wrap_content"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:layout_alignParentRight="true"-->
+                <!--                                android:background="@drawable/bg_accept"-->
+                <!--                                android:padding="6dp"-->
+                <!--                                android:textSize="14sp"-->
+                <!--                                android:backgroundTint="#445666d5"-->
+                <!--                                android:fontFamily="@font/maisonneuebook"-->
+                <!--                                android:textColor="#5666d5"-->
+                <!--                                android:text="Periode 1"/>-->
+                <!--                        </RelativeLayout>-->
+
+                <!--                        <RelativeLayout-->
+                <!--                            android:layout_width="match_parent"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginTop="10dp"-->
+                <!--                            android:layout_marginRight="10dp"-->
+                <!--                            android:layout_marginLeft="10dp">-->
+
+
+                <!--                            <TextView-->
+                <!--                                android:id="@+id/titleMati"-->
+                <!--                                android:layout_width="wrap_content"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:text="Ayam Mati"-->
+                <!--                                android:textSize="14sp"-->
+                <!--                                android:layout_alignParentLeft="true"-->
+                <!--                                android:fontFamily="@font/maisonneuebook"-->
+                <!--                                />-->
+
+                <!--                            <TextView-->
+                <!--                                android:id="@+id/txtTotalMati"-->
+                <!--                                android:layout_width="wrap_content"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:text="36 Ekor"-->
+                <!--                                android:textSize="14sp"-->
+                <!--                                android:layout_alignParentRight="true"-->
+                <!--                                android:fontFamily="@font/maison"-->
+                <!--                                />-->
+
+
+                <!--                            <TextView-->
+                <!--                                android:id="@+id/titleSakit"-->
+                <!--                                android:layout_width="wrap_content"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:text="Ayam Sakit"-->
+                <!--                                android:textSize="14sp"-->
+                <!--                                android:layout_marginTop="5dp"-->
+                <!--                                android:layout_below="@id/titleMati"-->
+                <!--                                android:layout_alignParentLeft="true"-->
+                <!--                                android:fontFamily="@font/maisonneuebook"-->
+                <!--                                />-->
+
+                <!--                            <TextView-->
+                <!--                                android:id="@+id/txtTotalSakit"-->
+                <!--                                android:layout_width="wrap_content"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:text="16 Ekor"-->
+                <!--                                android:layout_below="@id/txtTotalMati"-->
+                <!--                                android:textSize="14sp"-->
+                <!--                                android:layout_marginTop="5dp"-->
+                <!--                                android:layout_alignParentRight="true"-->
+                <!--                                android:fontFamily="@font/maison"-->
+                <!--                                />-->
+
+
+
+                <!--                            <TextView-->
+                <!--                                android:id="@+id/titleBerat"-->
+                <!--                                android:layout_width="wrap_content"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:text="Berat Ayam"-->
+                <!--                                android:textSize="14sp"-->
+                <!--                                android:layout_marginTop="5dp"-->
+                <!--                                android:layout_below="@id/titleSakit"-->
+                <!--                                android:layout_alignParentLeft="true"-->
+                <!--                                android:fontFamily="@font/maisonneuebook"-->
+                <!--                                />-->
+
+                <!--                            <TextView-->
+                <!--                                android:id="@+id/txtTotalBerat"-->
+                <!--                                android:layout_width="wrap_content"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:text="624 gram"-->
+                <!--                                android:layout_below="@id/txtTotalSakit"-->
+                <!--                                android:textSize="14sp"-->
+                <!--                                android:layout_marginTop="5dp"-->
+                <!--                                android:layout_alignParentRight="true"-->
+                <!--                                android:fontFamily="@font/maison"-->
+                <!--                                />-->
+
+
+                <!--                            <TextView-->
+                <!--                                android:id="@+id/titlePakanTerpakai"-->
+                <!--                                android:layout_width="wrap_content"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:text="Pakan Terpakai"-->
+                <!--                                android:textSize="14sp"-->
+                <!--                                android:layout_marginTop="5dp"-->
+                <!--                                android:layout_below="@id/titleBerat"-->
+                <!--                                android:layout_alignParentLeft="true"-->
+                <!--                                android:fontFamily="@font/maisonneuebook"-->
+                <!--                                />-->
+
+                <!--                            <TextView-->
+                <!--                                android:id="@+id/txtTotalPakanTerpakai"-->
+                <!--                                android:layout_width="wrap_content"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:text="120 Kg"-->
+                <!--                                android:layout_below="@id/txtTotalBerat"-->
+                <!--                                android:textSize="14sp"-->
+                <!--                                android:layout_marginTop="5dp"-->
+                <!--                                android:layout_alignParentRight="true"-->
+                <!--                                android:fontFamily="@font/maison"-->
+                <!--                                />-->
+                <!--                        </RelativeLayout>-->
+
+                <!--                        <com.google.android.material.button.MaterialButton-->
+                <!--                            android:id="@+id/button_lihat_selengkapnya"-->
+                <!--                            android:layout_width="match_parent"-->
+                <!--                            android:layout_below="@id/card_pict"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:textSize="12sp"-->
+                <!--                            android:text="Lihat Selengkapnya"-->
+                <!--                            android:gravity="center"-->
+                <!--                            app:cornerRadius="16dp"-->
+                <!--                            />-->
+
+                <!--                    </LinearLayout>-->
+                <!--                </androidx.cardview.widget.CardView>-->
+
+                <!--            </LinearLayout>-->
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/txt_spinner_pakan_nama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:text="Menu Home" />
+                    <TextView
+                        android:id="@+id/txt_spinner_obat_nama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:text="Menu Home" />
+                    <TextView
+                        android:id="@+id/txt_spinner_vitamin_nama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:text="Menu Home" />
+                    <TextView
+                        android:id="@+id/txt_spinner_vaksin_nama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:text="Menu Home" />
+                    ////
+
+
+
+                    <TextView
+                        android:id="@+id/txt_id_user_cekharian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:text="Menu Home" />
+
+                    <TextView
+                        android:id="@+id/txt_latitude"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        android:layout_marginLeft="10dp"
+                        android:text="latitude"/>
+
+                    <TextView
+                        android:id="@+id/txt_foto_cek"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        android:layout_marginLeft="10dp"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/txt_longitude"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        android:layout_marginLeft="10dp"
+                        android:text="longitude"/>
+
+                    <TextView
+                        android:id="@+id/txt_spinner_usia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:text="Menu Home" />
+                    <TextView
+                        android:id="@+id/txt_spinner_pakan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:text="Menu Home" />
+                    <TextView
+                        android:id="@+id/txt_spinner_obat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:text="Menu Home" />
+                    <TextView
+                        android:id="@+id/txt_spinner_vitamin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:text="Menu Home" />
+                    <TextView
+                        android:id="@+id/txt_spinner_vaksin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:text="Menu Home" />
+
+
+                    <TextView
+                        android:id="@+id/txt_get_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:text="Menu Home"
+                        android:visibility="gone"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_jumlah_ayam_cekharian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:layout_margin="10dp"
+                        android:visibility="gone"
+                        android:text="Yono"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_nama_petugas_cekharian"
+                        android:text="Yono"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_kode_blok_cekharian"
+                        android:text="Yono"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_kode_kandang_cekharian"
+                        android:text="Yono"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_alamat_kandang_cekharian"
+                        android:text="Yono"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_id_kandang_cekharian"
+                        android:text="Yono"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Populasi Ayam (Ekor)"
+                            android:textSize="14sp"
+                            android:textColor="#5666d5"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/maison" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Usia Ayam"
+                                android:textSize="12sp"
+                                android:textColor="#5666d5"
+                                android:layout_margin="10dp"
+                                android:fontFamily="@font/maisonneuebook" />
+
+
+                            <LinearLayout
+                                android:layout_weight="2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+
+                            <Spinner
+                                android:id="@+id/spinner_usias"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/custom_input"
+                                android:spinnerMode="dialog" />
+
+                                <TextView
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:textSize="16sp"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Hari"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:weightSum="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ayam Mati"
+                                    android:textSize="12sp"
+                                    android:textColor="#5666d5"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/maisonneuebook" />
+
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    app:hintEnabled="false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text"
+                                    style="@style/MyDenseOutlined"
+                                    app:errorEnabled="true"
+                                    android:id="@+id/edt_jumlah_ayam_mati">
+                                    <com.google.android.material.textfield.TextInputEditText
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/custom_input"
+                                        android:paddingLeft="10dp"
+                                        android:hint="Jumlah Ayam Mati"
+                                        android:layout_weight="1"
+                                        android:inputType="number"
+                                        android:textColorHint="#7f7f7f"
+                                        android:textSize="14sp"
+                                        android:textColor="#7f7f7f"
+                                        android:fontFamily="@font/maisonneuebook" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ayam Sakit"
+                                    android:textSize="12sp"
+                                    android:textColor="#5666d5"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/maisonneuebook" />
+
+
+
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    app:hintEnabled="false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text"
+                                    style="@style/MyDenseOutlined"
+                                    app:errorEnabled="true"
+                                    android:id="@+id/edt_jumlah_ayam_sakits">
+                                    <com.google.android.material.textfield.TextInputEditText
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/custom_input"
+                                        android:paddingLeft="10dp"
+                                        android:hint="Jumlah Ayam Sakit"
+                                        android:layout_weight="1"
+                                        android:inputType="number"
+                                        android:textColorHint="#7f7f7f"
+                                        android:textSize="14sp"
+                                        android:textColor="#7f7f7f"
+                                        android:fontFamily="@font/maisonneuebook" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Gejala Sakit"
+                                android:textSize="12sp"
+                                android:textColor="#5666d5"
+                                android:layout_margin="10dp"
+                                android:fontFamily="@font/maisonneuebook" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                app:hintEnabled="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="#5666d5"
+                                style="@style/MyDenseOutlined"
+                                app:errorEnabled="true"
+                                android:id="@+id/edt_gejala_sakits">
+                                <com.google.android.material.textfield.TextInputEditText
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/custom_input"
+                                    android:paddingLeft="10dp"
+                                    android:inputType="textMultiLine"
+                                    android:textColorHint="#7f7f7f"
+                                    android:textSize="14sp"
+                                    android:hint="Gejala"
+                                    android:gravity="top"
+                                    android:textColor="#7f7f7f"
+                                    android:lines="8"
+                                    android:maxLines="10"
+                                    android:minLines="6"
+                                    android:scrollbars="vertical"
+                                    android:fontFamily="@font/maisonneuebook" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Masa Pertumbuhan"
+                            android:textSize="14sp"
+                            android:textColor="#5666d5"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/maison" />
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Berat (gram)"
+                                android:textSize="12sp"
+                                android:textColor="#5666d5"
+                                android:layout_margin="10dp"
+                                android:fontFamily="@font/maisonneuebook" />
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                app:hintEnabled="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="#5666d5"
+                                style="@style/MyDenseOutlined"
+                                app:errorEnabled="true"
+                                android:id="@+id/edt_berat_bobot_ayam">
+                                <com.google.android.material.textfield.TextInputEditText
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/custom_input"
+                                    android:paddingLeft="10dp"
+                                    android:hint="Berat Ayam"
+                                    android:layout_weight="1"
+                                    android:inputType="number"
+                                    android:textColorHint="#7f7f7f"
+                                    android:textSize="14sp"
+                                    android:textColor="#7f7f7f"
+                                    android:fontFamily="@font/maisonneuebook" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Konsumsi Pakan"
+                            android:textSize="14sp"
+                            android:textColor="#5666d5"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/maison" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:drawableStart="@drawable/ic_baseline_info_24"
+                            android:drawableLeft="@drawable/ic_baseline_info_24"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:text="Pilih Tambahkan Pakan Untuk Memilih Jenis Pakan"
+                            android:textColor="#262626"
+                            android:textSize="11sp" />
+
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="wrap_content"
+                            app:singleSelection="true"
+                            >
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/tambahPakan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tambahkan Pakan"
+                                android:textAppearance="@style/chipText"
+                                app:chipIconSize="16sp"
+                                style="@style/CustomChip"
+                                android:textSize="12sp"/>
+
+
+                        </com.google.android.material.chip.ChipGroup>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Jenis Pakan"
+                                android:textSize="12sp"
+                                android:textColor="#5666d5"
+                                android:layout_margin="10dp"
+                                android:fontFamily="@font/maisonneuebook" />
+
+
+                            <Spinner
+                                android:id="@+id/spinner_pakans"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/custom_input"
+                                android:spinnerMode="dialog" />
+
+                            <LinearLayout
+                                android:id="@+id/linearstokpakan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="11sp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="2dp"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:text="Sisa stok : "/>
+
+                                <TextView
+                                    android:id="@+id/info_stokpakan"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="11sp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:text="12"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:weightSum="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jumlah Pakan Zak/Kg"
+                                    android:textSize="12sp"
+                                    android:textColor="#5666d5"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/maisonneuebook" />
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    app:hintEnabled="false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="#5666d5"
+                                    style="@style/MyDenseOutlined"
+                                    app:errorEnabled="true"
+                                    android:id="@+id/edt_jumlah_pakan_ayam">
+                                    <com.google.android.material.textfield.TextInputEditText
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/custom_input"
+                                        android:paddingLeft="10dp"
+                                        android:hint="Jumlah Pakan"
+                                        android:layout_weight="1"
+                                        android:inputType="number"
+                                        android:textColorHint="#7f7f7f"
+                                        android:textSize="14sp"
+                                        android:textColor="#7f7f7f"
+                                        android:fontFamily="@font/maisonneuebook" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jumlah Pakan gr/Ekor"
+                                    android:textSize="12sp"
+                                    android:textColor="#5666d5"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/maisonneuebook" />
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    app:hintEnabled="false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="#5666d5"
+                                    style="@style/MyDenseOutlined"
+                                    app:errorEnabled="true"
+                                    android:id="@+id/edt_jumlah_pakan_ayam_gram_ekor">
+                                    <com.google.android.material.textfield.TextInputEditText
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/custom_input"
+                                        android:paddingLeft="10dp"
+                                        android:hint="Jumlah Pakan"
+                                        android:layout_weight="1"
+                                        android:inputType="number"
+                                        android:textColorHint="#7f7f7f"
+                                        android:textSize="14sp"
+                                        android:textColor="#7f7f7f"
+                                        android:fontFamily="@font/maisonneuebook" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:weightSum="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:textColor="#5666d5"
+                                    android:layout_margin="10dp"
+
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:text="Jam Pemberian Pakan"/>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    app:hintEnabled="false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:startIconTint="#5666d5"
+                                    app:startIconDrawable="@drawable/ic_baseline_access_time_24"
+                                    style="@style/MyDenseOutlined"
+                                    app:errorEnabled="true"
+                                    android:id="@+id/edt_jam_pergantian_pakan">
+                                    <com.google.android.material.textfield.TextInputEditText
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/custom_input"
+                                        android:paddingLeft="10dp"
+                                        android:hint="Jam Pakan"
+                                        android:layout_weight="1"
+                                        android:inputType="none"
+                                        android:focusable="false"
+                                        android:textColorHint="#7f7f7f"
+                                        android:textSize="14sp"
+                                        android:textColor="#7f7f7f"
+                                        android:fontFamily="@font/maisonneuebook" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:textColor="#5666d5"
+                                    android:layout_margin="10dp"
+
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:text="Jam Pemberian Minum"/>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    app:hintEnabled="false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:startIconTint="#5666d5"
+                                    app:startIconDrawable="@drawable/ic_baseline_access_time_24"
+                                    style="@style/MyDenseOutlined"
+                                    app:errorEnabled="true"
+                                    android:id="@+id/edt_jam_pergantian_minum">
+                                    <com.google.android.material.textfield.TextInputEditText
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/custom_input"
+                                        android:paddingLeft="10dp"
+                                        android:hint="Jam minum"
+                                        android:layout_weight="1"
+                                        android:inputType="none"
+                                        android:focusable="false"
+                                        android:textColorHint="#7f7f7f"
+                                        android:textSize="14sp"
+                                        android:textColor="#7f7f7f"
+                                        android:fontFamily="@font/maisonneuebook" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Obat-Obatan"
+                            android:textSize="14sp"
+                            android:textColor="#5666d5"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/maison" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:drawableStart="@drawable/ic_baseline_info_24"
+                            android:drawableLeft="@drawable/ic_baseline_info_24"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:text="Klik Tambahkan Obat Jika Ingin Menambahkan Obat"
+                            android:textColor="#262626"
+                            android:textSize="11sp" />
+
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="wrap_content"
+                            app:singleSelection="true"
+                            >
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/tambahObat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tambahkan Obat"
+                                android:textAppearance="@style/chipText"
+                                app:chipIconSize="16sp"
+                                style="@style/CustomChip"
+                                android:textSize="12sp"/>
+
+
+                        </com.google.android.material.chip.ChipGroup>
+
+
+
+
+                        <LinearLayout
+                            android:id="@+id/linearObat"
+                            android:weightSum="3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jenis Obat"
+                                    android:textSize="12sp"
+                                    android:textColor="#5666d5"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/maisonneuebook" />
+
+                                <Spinner
+                                    android:id="@+id/spinner_obats"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/custom_input"
+                                    android:spinnerMode="dialog" />
+
+                                <LinearLayout
+                                    android:id="@+id/linearstokobat"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="11sp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="2dp"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:text="Sisa stok : "/>
+
+                                    <TextView
+                                        android:id="@+id/info_stokobat"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="11sp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginLeft="2dp"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:text="12"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jumlah Obat"
+                                    android:textSize="12sp"
+                                    android:textColor="#5666d5"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/maisonneuebook" />
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    app:hintEnabled="false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="#5666d5"
+                                    style="@style/MyDenseOutlined"
+                                    app:errorEnabled="true"
+                                    android:id="@+id/edt_jumlah_obat_ayam">
+                                    <com.google.android.material.textfield.TextInputEditText
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/custom_input"
+                                        android:paddingLeft="10dp"
+                                        android:hint="Jumlah Obat"
+                                        android:layout_weight="1"
+                                        android:inputType="number"
+                                        android:textColorHint="#7f7f7f"
+                                        android:textSize="14sp"
+                                        android:textColor="#7f7f7f"
+                                        android:fontFamily="@font/maisonneuebook" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vitamin"
+                            android:textSize="14sp"
+                            android:textColor="#5666d5"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/maison" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:drawableStart="@drawable/ic_baseline_info_24"
+                            android:drawableLeft="@drawable/ic_baseline_info_24"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:text="Klik Tambahkan Vitamin Jika Ingin Menambahkan Vitamin"
+                            android:textColor="#262626"
+                            android:textSize="11sp" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="wrap_content"
+                            app:singleSelection="true"
+                            >
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/tambahVitamin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tambahkan Vitamin"
+                                android:textAppearance="@style/chipText"
+                                app:chipIconSize="16sp"
+                                style="@style/CustomChip"
+                                android:textSize="12sp"/>
+
+
+                        </com.google.android.material.chip.ChipGroup>
+
+
+                        <LinearLayout
+                            android:id="@+id/linearVitamin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                        <LinearLayout
+
+                            android:weightSum="3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jenis Vitamin"
+                                    android:textSize="12sp"
+                                    android:textColor="#5666d5"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/maisonneuebook" />
+
+
+                                <Spinner
+                                    android:id="@+id/spinner_vitamins"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/custom_input"
+                                    android:spinnerMode="dialog" />
+
+                                <LinearLayout
+                                    android:id="@+id/linearstokvitamin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="11sp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="2dp"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:text="Sisa stok : "/>
+
+                                    <TextView
+                                        android:id="@+id/info_stokvitamin"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="11sp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginLeft="2dp"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:text="12"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jumlah Vitamin"
+                                    android:textSize="12sp"
+                                    android:textColor="#5666d5"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/maisonneuebook" />
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    app:hintEnabled="false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="#5666d5"
+                                    style="@style/MyDenseOutlined"
+                                    app:errorEnabled="true"
+                                    android:id="@+id/edt_jumlah_vitamin_ayam">
+                                    <com.google.android.material.textfield.TextInputEditText
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/custom_input"
+                                        android:paddingLeft="10dp"
+                                        android:hint="Jumlah Vitamin"
+                                        android:layout_weight="1"
+                                        android:inputType="number"
+                                        android:textColorHint="#7f7f7f"
+                                        android:textSize="14sp"
+                                        android:textColor="#7f7f7f"
+                                        android:fontFamily="@font/maisonneuebook" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:weightSum="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:textColor="#5666d5"
+                                    android:layout_margin="10dp"
+
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:text="Jam Pemberian Vitamin"/>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    app:hintEnabled="false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:startIconTint="#5666d5"
+                                    app:startIconDrawable="@drawable/ic_baseline_access_time_24"
+                                    style="@style/MyDenseOutlined"
+                                    app:errorEnabled="true"
+                                    android:id="@+id/edt_jam_pemberian_vitamin">
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/custom_input"
+                                        android:paddingLeft="10dp"
+                                        android:hint="Jam Vitamin"
+                                        android:layout_weight="1"
+                                        android:inputType="none"
+                                        android:focusable="false"
+                                        android:textColorHint="#7f7f7f"
+                                        android:textSize="14sp"
+                                        android:textColor="#7f7f7f"
+                                        android:fontFamily="@font/maisonneuebook" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vaksin"
+                            android:textSize="14sp"
+                            android:textColor="#5666d5"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/maison" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:drawableStart="@drawable/ic_baseline_info_24"
+                            android:drawableLeft="@drawable/ic_baseline_info_24"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/maisonneuebook"
+                            android:text="Klik Tambahkan Obat Jika Ingin Menambahkan Obat"
+                            android:textColor="#262626"
+                            android:textSize="11sp" />
+
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="wrap_content"
+                            app:singleSelection="true"
+                            >
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/tambahVaksin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tambahkan Vaksin"
+                                android:textAppearance="@style/chipText"
+                                app:chipIconSize="16sp"
+                                style="@style/CustomChip"
+                                android:textSize="12sp"/>
+
+
+                        </com.google.android.material.chip.ChipGroup>
+
+
+                        <LinearLayout
+                            android:id="@+id/linearVaksin"
+                            android:weightSum="3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jenis Vaksin"
+                                    android:textSize="12sp"
+                                    android:textColor="#5666d5"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/maisonneuebook" />
+
+
+                                <Spinner
+                                    android:id="@+id/spinner_vaksins"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/custom_input"
+                                    android:spinnerMode="dialog" />
+
+                                <LinearLayout
+                                    android:id="@+id/linearstokvaksin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="11sp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="2dp"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:text="Sisa stok : "/>
+
+                                    <TextView
+                                        android:id="@+id/info_stokvaksin"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="11sp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginLeft="2dp"
+                                        android:fontFamily="@font/maisonneuebook"
+                                        android:text="12"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jumlah Vaksin"
+                                    android:textSize="12sp"
+                                    android:textColor="#5666d5"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/maisonneuebook" />
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    app:hintEnabled="false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text"
+                                    app:endIconTint="#5666d5"
+                                    app:errorEnabled="true"
+                                    style="@style/MyDenseOutlined"
+                                    android:id="@+id/edt_jumlah_vaksin_ayam">
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/custom_input"
+                                        android:paddingLeft="10dp"
+                                        android:hint="Jumlah Vaksin"
+                                        android:layout_weight="1"
+                                        android:inputType="number"
+                                        android:textColorHint="#7f7f7f"
+                                        android:textSize="14sp"
+                                        android:textColor="#7f7f7f"
+                                        android:fontFamily="@font/maisonneuebook" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bukti Laporan"
+                            android:textSize="14sp"
+                            android:textColor="#5666d5"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/maison" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp">
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card_pict"
+                                android:layout_width="80dp"
+                                android:layout_height="100dp"
+                                app:cardCornerRadius="10dp"
+                                android:layout_margin="10dp"
+                                app:cardElevation="10dp">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/hasil_foto_harian"
+                                        android:layout_width="80dp"
+                                        android:layout_height="100dp"
+                                        android:adjustViewBounds="true"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/image_background"/>
+
+
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/button_ambil_bukti"
+                                android:layout_width="wrap_content"
+                                android:layout_below="@id/card_pict"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp"
+                                android:text="Ambil Bukti"
+                                android:gravity="center"
+                                app:cornerRadius="16dp"
+                                />
+
+                            <ImageView
+                                android:id="@+id/imgSimpan"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginRight="16dp"
+                                android:src="@drawable/view_btn"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:layout_centerInParent="true">
+                <ProgressBar
+                    android:id="@+id/pgbar_cekharian"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:visibility="visible"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

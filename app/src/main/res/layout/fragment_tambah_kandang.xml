@@ -1,0 +1,347 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f5f5f5"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    tools:context="org.d3ifcool.testing.TambahKandangFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f5f5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolBarTambahKandang"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:navigationIcon="?homeAsUpIndicator"
+                    app:title="Kandang Pribadi"
+                    app:titleTextColor="#262626" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_tambah_kandang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/toolBarTambahKandang"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_accept"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:clickable="true"
+                    app:layout_constraintTop_toTopOf="@+id/toolBarTambahKandang"
+                    android:layout_marginRight="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/maison"
+                        android:text="Simpan"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_id_user_tambah_kandang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/text_input_alamat_kandang"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:errorEnabled="true">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="alamat kandang"-->
+<!--            android:inputType="text"-->
+<!--            android:layout_margin="5dp"/>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/text_input_kode_kandang"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:errorEnabled="true">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="kode kandang"-->
+<!--            android:inputType="text"-->
+<!--            android:layout_margin="5dp"/>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/text_input_kode_blok_kandang"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:errorEnabled="true">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="kode blok"-->
+<!--            android:inputType="text"-->
+<!--            android:layout_margin="5dp"/>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <Spinner-->
+<!--            android:id="@+id/spinner_jenis_kandang"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+
+<!--    </LinearLayout>-->
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat Kandang"
+            android:textSize="12sp"
+            android:textColor="#262626"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/maisonneuebook" />
+
+        <TextView
+            android:id="@+id/text_tambah_kandang_alamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat Kandang"
+            android:visibility="gone"
+            android:textSize="12sp"
+            android:textColor="#262626"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/maisonneuebook" />
+
+
+
+
+
+<!--        <EditText-->
+<!--            android:id="@+id/actProvinsi"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/edittext_bottom_line"-->
+<!--            android:height="40dp"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:hint="Provinsi"-->
+<!--            android:textColorHint="#7f7f7f"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textColor="#7f7f7f"-->
+<!--            android:fontFamily="@font/maisonneuebook" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/actKabKota"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:height="40dp"-->
+<!--            android:background="@drawable/edittext_bottom_line"-->
+<!--            android:fontFamily="@font/maisonneuebook"-->
+<!--            android:hint="Kota/Kabupaten"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:textColor="#7f7f7f"-->
+<!--            android:textColorHint="#7f7f7f"-->
+<!--            android:textSize="14sp" />-->
+
+        <EditText
+            android:id="@+id/actKabKota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bottom_line"
+            android:height="40dp"
+            android:paddingLeft="10dp"
+            android:hint="Kota/Kabupaten"
+            android:textColorHint="#7f7f7f"
+            android:textSize="14sp"
+            android:textColor="#7f7f7f"
+            android:fontFamily="@font/maisonneuebook" />
+
+        <EditText
+            android:id="@+id/actKecamatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bottom_line"
+            android:height="40dp"
+            android:paddingLeft="10dp"
+            android:hint="Kecamatan"
+            android:textColorHint="#7f7f7f"
+            android:textSize="14sp"
+            android:textColor="#7f7f7f"
+            android:fontFamily="@font/maisonneuebook" />
+
+
+    <EditText
+        android:id="@+id/actJalan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:height="40dp"
+        android:paddingLeft="10dp"
+        android:hint="Nama Jalan, No. Rumah/Kandang"
+        android:textColorHint="#7f7f7f"
+        android:textSize="14sp"
+        android:textColor="#7f7f7f"
+        android:fontFamily="@font/maisonneuebook" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kode dan Blok Kandang"
+            android:textSize="12sp"
+            android:textColor="#262626"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/maisonneuebook" />
+
+        <EditText
+            android:id="@+id/text_input_kode_kandang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bottom_line"
+            android:height="40dp"
+            android:paddingLeft="10dp"
+            android:hint="Kode kandang"
+            android:textColorHint="#7f7f7f"
+            android:textSize="14sp"
+            android:textColor="#7f7f7f"
+            android:fontFamily="@font/maisonneuebook" />
+
+        <EditText
+            android:id="@+id/text_input_kode_blok_kandang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:height="40dp"
+            android:paddingLeft="10dp"
+            android:hint="Blok Kandang"
+            android:textColorHint="#7f7f7f"
+            android:textSize="14sp"
+            android:textColor="#7f7f7f"
+            android:fontFamily="@font/maisonneuebook" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Kandang"
+            android:textSize="12sp"
+            android:textColor="#262626"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/maisonneuebook" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            android:backgroundTint="@color/white"
+            app:endIconTint="#7f7f7f"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteJenisKandang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:height="10dp"
+                android:textSize="14sp"
+                android:inputType="none"
+                android:textColor="#7f7f7f"
+                android:paddingBottom="16dp"
+                android:paddingStart="10dp"
+                android:paddingTop="16dp"
+                android:text="Jenis Kandang"
+                android:paddingLeft="10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_tambah_kandang"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:text="Tambah Kandang"/>-->
+</LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

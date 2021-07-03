@@ -1,0 +1,2782 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="org.d3ifcool.testing.Profil.ProfileChildMenu.PanduanFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        app:elevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBarPanduan"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="#fff"
+                app:navigationIcon="?homeAsUpIndicator"
+                app:title="Panduan" />
+
+            <!--            <RelativeLayout-->
+            <!--                android:id="@+id/btn_edit_profile"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                app:layout_constraintBottom_toBottomOf="@+id/toolBarProfile"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                android:layout_marginEnd="16dp"-->
+            <!--                android:paddingLeft="5dp"-->
+            <!--                android:paddingRight="5dp"-->
+            <!--                android:clickable="true"-->
+            <!--                app:layout_constraintTop_toTopOf="@+id/toolBarProfile"-->
+            <!--                android:layout_marginRight="16dp">-->
+
+            <!--                <ImageView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:src="@drawable/ic_inspiration"/>-->
+
+
+            <!--            </RelativeLayout>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                app:cardElevation="10dp"
+                android:layout_height="200dp">
+                <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/kandang"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="#7F000000"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Panduan Penggunaan Aplikasi"
+                    android:fontFamily="@font/maisonbold"
+                    android:textColor="#fff"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="20dp"
+                    android:textSize="20sp"/>
+            </androidx.cardview.widget.CardView>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/maisonneuebook"
+                    android:textColor="#5666d5"
+                    android:drawableStart="@drawable/ic_baseline_list_24"
+                    android:drawablePadding="10dp"
+                    android:text="Daftar Panduan"
+                    android:drawableLeft="@drawable/ic_baseline_list_24" />
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:orientation="vertical"
+                        >
+
+                        <com.github.florent37.expansionpanel.ExpansionHeader
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            app:expansion_headerIndicator="@id/headerIndicator"
+                            app:expansion_layout="@id/expansionLayout"
+                            app:expansion_toggleOnClick="true">
+
+                            <!-- HEADER -->
+
+
+                            <!-- HEADER INDICATOR -->
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonbold"
+                                android:textSize="14sp"
+                                android:text="1. Registrasi Akun"/>
+                            <ImageView
+                                android:adjustViewBounds="true"
+                                android:id="@+id/headerIndicator"
+                                android:layout_gravity="center_vertical|right"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_width="wrap_content"
+                                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+
+                        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                        <com.github.florent37.expansionpanel.ExpansionLayout
+                            android:id="@+id/expansionLayout"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent">
+
+                            <!-- CONTENT -->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:textSize="14sp"
+                                    android:layout_margin="5dp"
+                                    android:lineHeight="14dp"
+                                    android:justificationMode="inter_word"
+                                    android:text="Untuk Menggunakan Aplikasi Agrobiz Anda Harus Memiliki Akun Untuk Masuk"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:justificationMode="inter_word"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:textSize="14sp"
+                                    android:lineHeight="14dp"
+                                    android:text="1. Buka Aplikasi Agrobiz"/>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="120dp"
+                                        android:layout_gravity="center"
+                                        android:adjustViewBounds="true"
+                                        android:layout_height="200dp"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/login"/>
+
+                                    <ImageView
+                                        android:layout_width="120dp"
+                                        android:adjustViewBounds="true"
+                                        android:layout_height="200dp"
+                                        android:layout_margin="5dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/register"/>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:justificationMode="inter_word"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:textSize="14sp"
+                                    android:lineHeight="14dp"
+                                    android:text="2. Jika belum memiliki akun silahkan daftar dengan memilih belum punya akun pada halaman Login"/>
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:justificationMode="inter_word"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:textSize="14sp"
+                                    android:lineHeight="14dp"
+                                    android:text="3. Isi data diri, lalu klik Daftar"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:justificationMode="inter_word"
+                                    android:fontFamily="@font/maisonneuebook"
+                                    android:textSize="14sp"
+                                    android:lineHeight="14dp"
+                                    android:text="2. Jika Sudah Memiliki Akun Silahkan Masukkan Username Dan Password Pada Halaman Login Untuk Masuk Ke Halaman Dashboard"/>
+
+                            </LinearLayout>
+
+
+                        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                    </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="2. Tambah Kandang"/>
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Untuk menambahkan kandang anda harus masuk ke menu KandangKu"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Dashboard"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/dashboard"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Pilih menu KandangKu"/>
+
+
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/kandangku"/>
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelah masuk ke menu KandangKu pilih Tambah Kandang"/>
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/tambahkdg"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="4. Setelah isi form Tambah Kandang, lalu Simpan"/>
+
+
+                        </LinearLayout>
+
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="3. Cek Persiapan Kandang"/>
+
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Untuk melakukan Cek Kesiapan Kandang anda harus masuk ke menu KandangKu dan pilih kandang pada list kandang untuk dikelola"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Menu KandangKu, dan pilih kandang pada list"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/kandangkulist"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Setelah itu pada menu Pengecekan pilih Menu Persiapan Kandang"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/pengecekanhalaman"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelah masuk ke menu Persiapan Kandang, isi form Persiapan Kandang"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/persiapankandang"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="4. Setelah isi form persiapan Kandang, aktifkan kandang lalu Simpan"/>
+
+                        </LinearLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="4. Inventory"/>
+
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Untuk melakukan request inventory anda harus masuk ke menu Inventory untuk dapat melakukan request inventory berupa Pakan, Obat, Vitamin, Vaksin"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Menu KandangKu, dan pilih kandang pada list"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/kandangkulist"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Setelah itu pada menu Pengecekan pilih Menu Inventory"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/pengecekanhalaman"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelah masuk ke menu Inventory, pilih kategori yang ingin di request dan isi form Inventory"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/inventoryhalaman"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="4. Setelah isi form Inventory, lalu Simpan"/>
+
+                        </LinearLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="5. Membatalkan Request Inventory"/>
+
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Untuk membatalkan request inventory anda harus masuk ke menu Inventory dan pilih request yang ingin dibatalkan pada list"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Menu Inventory, dan pilih request yang ingin dibatalkan pada list"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/inventoryhalamanlist"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Setelah dipilih akan muncul Popup detail request"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/batalkaninventory"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelaj itu pilih Batalkan Request pada detail request"/>
+
+
+                        </LinearLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="6. Konfirmasi Request Inventory Diterima"/>
+
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Untuk Konfirmasi request inventory Sudah Diterima anda harus masuk ke menu Inventory dan pilih request yang ingin Dikonfirmasi telah diterima pada list"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Menu Inventory, dan pilih request yang ingin dikonfirmasi pada list"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/inventoryhalamanlist"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Setelah dipilih akan muncul Popup detail request"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/inventoryditerima"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelah itu pilih Diterima pada detail request"/>
+
+
+                        </LinearLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="7. Chickin"/>
+
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Untuk melakukan pendataan Chickin(Ayam Masuk) anda harus masuk ke menu Chickin."/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Menu KandangKu, dan pilih kandang pada list"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/kandangkulist"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Setelah itu pada menu Pengecekan pilih Menu Chickin"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/pengecekanhalaman"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelah masuk ke menu Chickin, isi form Chickin"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/chickinhalaman"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="4. Setelah isi form Chickin, lalu Simpan"/>
+
+                        </LinearLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="8. Pengecekan Harian"/>
+
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Untuk melakukan Pengecekan Harian anda harus masuk ke menu Cek Harian."/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Menu KandangKu, dan pilih kandang pada list"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/kandangkulist"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Setelah itu pada menu Pengecekan pilih Menu Cek Harian"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/pengecekanhalaman"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelah masuk ke menu Cek Harian, isi form Cek Harian"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/cekharianhalaman"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="4. Setelah isi form Cek Harian, lalu Simpan"/>
+
+                        </LinearLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="9. Pengecekan Sampel"/>
+
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Untuk melakukan pendataan Sampel anda harus masuk ke menu Cek Sampel."/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Menu KandangKu, dan pilih kandang pada list"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/kandangkulist"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Setelah itu pada menu Pengecekan pilih Menu Cek Sampel"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/pengecekanhalaman"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelah masuk ke menu Cek Sampel, isi form Cek Sampel"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/ceksampelhalaman"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="4. Setelah isi form Cek Sampel, lalu Simpan"/>
+
+                        </LinearLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="9. Panen Dan Penimbangan"/>
+
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Untuk melakukan pendataan Panen Dan Penimbangan anda harus masuk ke menu Panen Dan Penimbangan."/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Menu KandangKu, dan pilih kandang pada list"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/kandangkulist"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Setelah itu pada menu Pengecekan pilih Menu Panen Dan Penimbangan"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/pengecekanhalaman"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelah masuk ke menu Panen Dan Penimbangan, isi form Panen Dan Penimbangan"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/panenpenimbanganhalaman"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="4. Setelah isi form Panen Dan Penimbangan, lalu Simpan"/>
+
+                        </LinearLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="10. Performa Kandang"/>
+
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Untuk melihat Performa Kandang Selama Pengelolaan anda harus masuk ke menu Performa Kandang."/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Menu KandangKu, dan pilih kandang pada list"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/kandangkulist"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Setelah itu pada menu Pengecekan pilih Menu Panen Dan Penimbangan"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/pengecekanhalaman"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelah masuk ke menu Performa Kandang, Pilih Periode untuk melihat Performa Kandang berdasarkan periode"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/performahalaman"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="4. Setelah isi form Panen Dan Penimbangan, lalu Simpan"/>
+
+                        </LinearLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="11. MedisKu"/>
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Untuk melihat dan mengetahui gejala medis jika ayam terkena suatu penyakit, kamu bisa masuk ke menu MedisKu"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Dashboard"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/dashboard"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Pilih menu Medisku"/>
+
+
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/halamanmedisku"/>
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelah masuk ke menu Medisku pilih salah satu penyakit yang ingin kamu ketahui"/>
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/halamanlistmedisku"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="4. setelah kamu pilih, akan masuk ke halaman berisi info tentang penyakit yang kamu pilih"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/halamandetailmedisku"/>
+
+                        </LinearLayout>
+
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="12. Profile"/>
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Pada Menu Profile terdapat beberapa menu tambahan terkait dengan pengelolaan, kamu bisa masuk ke menu profile untuk melihatnya"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Dashboard"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/dashboard"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Pilih icon user sebelah pojok kanan atas, atau pada toolbar"/>
+
+
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/halamanmedisku"/>
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelah masuk ke menu Profile anda dapat melihat beberapa menu dan info tentang akun anda"/>
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/halamanprofile"/>
+
+
+                        </LinearLayout>
+
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="13. Data Harian"/>
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Pada Menu Data Harian kamu bisa melihat riwayat log catatan harian yang kamu inputkan"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Profile"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/dashboard"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Pilih icon user sebelah pojok kanan atas, atau pada toolbar"/>
+
+
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/halamanprofile"/>
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelah masuk ke menu Profile, pilih menu Data Harian"/>
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/halamandataharian"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="4. Setelah masuk ke menu Data Harian, pilih kandang beserta periode untuk melihat riwayat pengecekan harian"/>
+
+
+                        </LinearLayout>
+
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="14. Data Sampel"/>
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Pada Menu Data Sampel kamu bisa melihat riwayat log catatan sampel yang kamu inputkan"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Profile"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/dashboard"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Pilih icon user sebelah pojok kanan atas, atau pada toolbar"/>
+
+
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/halamanprofile"/>
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelah masuk ke menu Profile, pilih menu Data Sampel"/>
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/halamandatasampel"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="4. Setelah masuk ke menu Data Sampel, pilih kandang beserta periode untuk melihat riwayat pengecekan sampel"/>
+
+
+                        </LinearLayout>
+
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="15. Data Stok"/>
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Pada Menu Data Stok kamu bisa melihat sisa stok yang ada pandang kamu"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Profile"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/dashboard"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Pilih icon user sebelah pojok kanan atas, atau pada toolbar"/>
+
+
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/halamanprofile"/>
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelah masuk ke menu Profile, pilih menu Data Stok"/>
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/halamandatastok"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="4. Setelah masuk ke menu Data Stok, pilih kategori beserta kandang untuk melihat sisa stok"/>
+
+
+                        </LinearLayout>
+
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="15. Data Panen"/>
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Pada Menu Data Panen kamu bisa melihat riwayat log catatan panen yang kamu inputkan"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Profile"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/dashboard"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Pilih icon user sebelah pojok kanan atas, atau pada toolbar"/>
+
+
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/halamanprofile"/>
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelah masuk ke menu Profile, pilih menu Data Panen"/>
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/halamandatapanen"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="4. Setelah masuk ke menu Data Panen, pilih kandang beserta periode untuk melihat riwayat panen"/>
+
+
+                        </LinearLayout>
+
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="16. Rumus Hitungan"/>
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Pada Menu Rumus kamu bisa melihat beberapa rumus yang digunakan dalam mengelola ayam broiler"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Profile"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/dashboard"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Pilih icon user sebelah pojok kanan atas, atau pada toolbar"/>
+
+
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/halamanprofile"/>
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelah masuk ke menu Profile, pilih menu Rumus"/>
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/halamanrumus"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="4. Setelah masuk ke menu Rumus, kamu dapat melihat beberapa rumus yang digunakan untuk mengelola perkembangan ayam broiler"/>
+
+
+                        </LinearLayout>
+
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <!-- HEADER -->
+
+
+                        <!-- HEADER INDICATOR -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maisonbold"
+                            android:textSize="14sp"
+                            android:text="17. Tentang Kami"/>
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp"
+                            tools:ignore="DuplicateIds" />
+
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <!-- CONTENT -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:layout_margin="5dp"
+                                android:lineHeight="14dp"
+                                android:justificationMode="inter_word"
+                                android:text="Pada Menu Tentang Kami kamu bisa melihat info tentang aplikasi ini"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="1. Masuk Ke Profile"/>
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/dashboard"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="2. Pilih icon user sebelah pojok kanan atas, atau pada toolbar"/>
+
+
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/halamanprofile"/>
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="3. Setelah masuk ke menu Profile, pilih menu Tentang Kami"/>
+
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:layout_height="200dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/halamantentangaplikasi"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:justificationMode="inter_word"
+                                android:fontFamily="@font/maisonneuebook"
+                                android:textSize="14sp"
+                                android:lineHeight="14dp"
+                                android:text="4. Setelah masuk ke menu Tentang Kami, kamu dapat melihat info tentang aplikasi ini dan privasi policy aplikasi ini"/>
+
+
+                        </LinearLayout>
+
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

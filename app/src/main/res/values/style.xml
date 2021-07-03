@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="viewParent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="viewParent.headerText">
+        <item name="android:textColor">@color/contentTextColor</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="viewParent.headerText.NoMode">
+        <item name="android:textColor">@color/darkTextColor</item>
+    </style>
+
+    <style name="parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="nameOfStyle">
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
+    <style name="expandedBarTextStyle" parent="Theme.Testing">
+        <item name="android:textSize">0sp</item>
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/maison</item>
+    </style>
+
+<!--    <style name="modifiedEditText" parent="parent">-->
+<!--        <item name="android:textSize">@dimen/newsMoreTextSize</item>-->
+<!--        <item name="android:backgroundTint">@color/primaryTextColor</item>-->
+<!--    </style>-->
+
+<!--    <style name="loginButton" parent="viewParent">-->
+<!--        <item name="android:background">@drawable/button_background_blue</item>-->
+<!--        <item name="android:textColor">@color/whiteTextColor</item>-->
+<!--        <item name="android:textStyle">bold</item>-->
+<!--    </style>-->
+
+<!--    <style name="spinnerHintText" parent="parent">-->
+<!--        <item name="android:textSize">@dimen/newsMoreTextSize</item>-->
+<!--        <item name="android:textColor">@color/colorAccent</item>-->
+<!--        <item name="android:paddingLeft">5dp</item>-->
+<!--    </style>-->
+
+    <style name="Theme.Custom" parent="Theme.Testing">
+        <item name="windowActionBar">false</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="CustomActionBar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:windowActionBarOverlay">true</item>
+        <!-- Support library compatibility -->
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+    
+    <style name="CustomChip" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_bg_color</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="android:fontFamily">@font/maisonbold</item>
+        <item name="checkedIconTint">#fff</item>
+        <item name="rippleColor">#10ffffff</item>
+    </style>
+
+    <style name="chipText" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:fontFamily">@font/chip_font</item>
+    </style>
+</resources>
